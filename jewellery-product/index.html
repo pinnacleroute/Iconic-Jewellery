@@ -32,7 +32,7 @@
       <li><a href="../serial-verification/">Verify</a></li>
     </ul>
     <a class="brand" href="../" aria-label="Iconic Jewellery home">
-      <img class="brand-logo" src="../../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery">
+      <img class="brand-logo" src="../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery">
     </a>
     <div class="nav-actions">
       <a href="../account/">Account</a>
@@ -44,7 +44,7 @@
 </header>
 <div class="mobile-menu-panel" id="mobile-menu" aria-hidden="true">
   <div class="mobile-menu-head">
-    <a class="brand" href="../" aria-label="Iconic Jewellery home"><img class="brand-logo" src="../../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery"></a>
+    <a class="brand" href="../" aria-label="Iconic Jewellery home"><img class="brand-logo" src="../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery"></a>
     <button class="mobile-menu-close" type="button">Close</button>
   </div>
   <nav aria-label="Mobile navigation">
@@ -64,38 +64,123 @@
   </nav>
 </div>
 <main id="top">
-<section class="page-intro"><div class="container"><span class="kicker">Jewellery product detail</span><h1 class="section-title">Oval Diamond Solitaire Ring</h1><p class="section-copy">A refined product page with certification, appointments, wishlist states, and a confident purchase path.</p></div></section><section class="section"><div class="container"><article class="screen screen-wide reveal">
-          <div class="screen-header">
-            <h3>Jewellery Product Detail</h3>
-            <span class="status-pill" style="color:var(--green);border-color:rgba(5,5,5,0.25)">Wishlist enabled</span>
+<section class="section jewellery-pdp-section" aria-labelledby="product-title">
+  <div class="container jewellery-pdp-grid">
+    <div class="product-gallery reveal" aria-label="Emerald Grace Ring image gallery">
+      <div class="gallery-main gallery-emerald-main"></div>
+      <div class="gallery-thumbs">
+        <button class="gallery-thumb gallery-emerald-main active" type="button" aria-label="View front angle"></button>
+        <button class="gallery-thumb gallery-emerald-side" type="button" aria-label="View side detail"></button>
+        <button class="gallery-thumb gallery-emerald-close" type="button" aria-label="View stone close up"></button>
+      </div>
+    </div>
+
+    <article class="product-purchase-panel reveal">
+      <span class="kicker">Jewellery Product Detail</span>
+      <h1 class="section-title" id="product-title">Emerald Grace Ring</h1>
+      <strong class="product-price">AUD 3,850</strong>
+      <p class="section-copy">A refined jewellery piece designed with timeless elegance and premium craftsmanship. Created for customers who value understated luxury and lasting beauty.</p>
+
+      <dl class="product-detail-list">
+        <div><dt>Metal</dt><dd>18K Gold</dd></div>
+        <div><dt>Stone</dt><dd>Emerald / Diamond</dd></div>
+        <div><dt>Finish</dt><dd>Polished</dd></div>
+        <div><dt>Category</dt><dd>Ring</dd></div>
+        <div><dt>Availability</dt><dd>In Stock</dd></div>
+      </dl>
+
+      <div class="product-controls">
+        <fieldset class="size-selector">
+          <legend>Size</legend>
+          <div>
+            <button class="active" type="button">6</button>
+            <button type="button">7</button>
+            <button type="button">8</button>
+            <button type="button">Custom</button>
           </div>
-          <div class="screen-body pdp">
-            <div class="pdp-image"></div>
-            <div>
-              <span class="kicker">Iconic bridal</span>
-              <h4>Oval Diamond Solitaire Ring</h4>
-              <p class="section-copy">A refined product page with certification, metal selection, size controls, appointment booking, and a confident add-to-cart path.</p>
-              <div class="selector-grid">
-                <button class="active" type="button">Platinum</button>
-                <button type="button">18k Gold</button>
-                <button type="button">Rose Gold</button>
-              </div>
-              <a class="btn btn-primary" href="../cart/">Add to Cart</a>
-              <a class="btn btn-secondary" href="../account/">Book Viewing</a>
-              <ul class="detail-list">
-                <li><span>Diamond certificate</span><strong>GIA verified</strong></li>
-                <li><span>Availability</span><strong>In showroom</strong></li>
-                <li><span>Insurance valuation</span><strong>Included</strong></li>
-              </ul>
-            </div>
-          </div>
-        </article></div></section>
+        </fieldset>
+
+        <label class="quantity-control">
+          <span>Quantity</span>
+          <input type="number" min="1" value="1">
+        </label>
+      </div>
+
+      <div class="product-actions">
+        <a class="btn btn-primary" href="../cart/">Add to Cart</a>
+        <a class="btn btn-secondary" href="../account/">Add to Wishlist</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="delivery-care-section" aria-labelledby="delivery-care-title">
+  <div class="container delivery-care-inner">
+    <span class="kicker reveal">Delivery &amp; Care</span>
+    <h2 class="section-title reveal" id="delivery-care-title">Delivery &amp; Care</h2>
+    <p class="section-copy reveal">Secure packaging, careful handling, and delivery options will be available at checkout. Jewellery care guidance can be provided with each order.</p>
+  </div>
+</section>
+
+<section class="section related-products-section" aria-labelledby="related-title">
+  <div class="container">
+    <div class="split-heading">
+      <div>
+        <span class="kicker reveal">Related Products</span>
+        <h2 class="section-title reveal" id="related-title">You May Also Like</h2>
+      </div>
+      <p class="section-copy reveal">Explore complementary pieces with the same refined finish and elegant presentation.</p>
+    </div>
+    <div class="related-product-grid">
+      <article class="catalogue-card reveal">
+        <div class="catalogue-image catalogue-necklace">
+          <button class="wishlist-button" type="button" aria-label="Add Celeste Diamond Necklace to wishlist">♡</button>
+        </div>
+        <div class="catalogue-info">
+          <h2>Celeste Diamond Necklace</h2>
+          <p>White gold chain with certified diamonds</p>
+          <div class="catalogue-footer"><strong>AUD 7,200</strong><a class="btn btn-primary btn-small" href="../jewellery-product/">View Details</a></div>
+        </div>
+      </article>
+      <article class="catalogue-card reveal">
+        <div class="catalogue-image catalogue-bracelet">
+          <button class="wishlist-button" type="button" aria-label="Add Royal Halo Bracelet to wishlist">♡</button>
+        </div>
+        <div class="catalogue-info">
+          <h2>Royal Halo Bracelet</h2>
+          <p>Polished gold bracelet with halo detailing</p>
+          <div class="catalogue-footer"><strong>AUD 4,950</strong><a class="btn btn-primary btn-small" href="../jewellery-product/">View Details</a></div>
+        </div>
+      </article>
+      <article class="catalogue-card reveal">
+        <div class="catalogue-image catalogue-earrings">
+          <button class="wishlist-button" type="button" aria-label="Add Classic Pearl Earrings to wishlist">♡</button>
+        </div>
+        <div class="catalogue-info">
+          <h2>Classic Pearl Earrings</h2>
+          <p>Freshwater pearls with 18k gold settings</p>
+          <div class="catalogue-footer"><strong>AUD 1,480</strong><a class="btn btn-primary btn-small" href="../jewellery-product/">View Details</a></div>
+        </div>
+      </article>
+      <article class="catalogue-card reveal">
+        <div class="catalogue-image catalogue-set">
+          <button class="wishlist-button" type="button" aria-label="Add Iconic Gold Set to wishlist">♡</button>
+        </div>
+        <div class="catalogue-info">
+          <h2>Iconic Gold Set</h2>
+          <p>Coordinated 22k gold necklace, bracelet, and earrings</p>
+          <div class="catalogue-footer"><strong>AUD 14,900</strong><a class="btn btn-primary btn-small" href="../jewellery-product/">View Details</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 </main>
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img class="footer-logo" src="../../assets/iconic/iconic-jewellery-logo-dark-cropped.jpeg" alt="Iconic Jewellery">
+        <img class="footer-logo" src="../assets/iconic/iconic-jewellery-logo-dark-cropped.jpeg" alt="Iconic Jewellery">
         <h2>Luxury retail, secured for bullion-grade trust.</h2>
       </div>
       <div>
@@ -124,6 +209,6 @@
     </div>
   </div>
 </footer>
-<script src="../site.js"></script>
+<script src="../site.js?v=20260603-newsletter"></script>
 </body>
 </html>

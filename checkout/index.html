@@ -32,7 +32,7 @@
       <li><a href="../serial-verification/">Verify</a></li>
     </ul>
     <a class="brand" href="../" aria-label="Iconic Jewellery home">
-      <img class="brand-logo" src="../../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery">
+      <img class="brand-logo" src="../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery">
     </a>
     <div class="nav-actions">
       <a href="../account/">Account</a>
@@ -44,7 +44,7 @@
 </header>
 <div class="mobile-menu-panel" id="mobile-menu" aria-hidden="true">
   <div class="mobile-menu-head">
-    <a class="brand" href="../" aria-label="Iconic Jewellery home"><img class="brand-logo" src="../../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery"></a>
+    <a class="brand" href="../" aria-label="Iconic Jewellery home"><img class="brand-logo" src="../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery"></a>
     <button class="mobile-menu-close" type="button">Close</button>
   </div>
   <nav aria-label="Mobile navigation">
@@ -64,23 +64,83 @@
   </nav>
 </div>
 <main id="top">
-<section class="page-intro"><div class="container"><span class="kicker">Encrypted checkout</span><h1 class="section-title">Secure Checkout</h1><p class="section-copy">A restrained checkout flow that separates jewellery ease from bullion compliance.</p></div></section><section class="section"><div class="container"><div class="page-gallery"><article class="screen reveal" id="checkout">
-          <div class="screen-header"><h3>Checkout</h3><span class="status-pill" style="color:var(--green);border-color:rgba(5,5,5,0.25)">Encrypted</span></div>
-          <div class="screen-body">
-            <div class="checkout-panel form-grid">
-              <div class="field"><label for="delivery">Delivery method</label><select id="delivery"><option>Insured delivery</option><option>Vault pickup</option><option>Private appointment</option></select></div>
-              <div class="field"><label for="payment">Payment method</label><select id="payment"><option>Bank transfer</option><option>Card for jewellery only</option><option>Approved account invoice</option></select></div>
-              <div class="field"><label for="notes">Order notes</label><input id="notes" value="Request valuation document with jewellery item"></div>
-              <button class="btn btn-primary" type="button">Place Secure Order</button>
-            </div>
-          </div>
-        </article></div></div></section>
+<section class="checkout-hero" aria-labelledby="checkout-title">
+  <div class="container checkout-hero-inner">
+    <span class="kicker reveal">Encrypted Checkout</span>
+    <h1 class="section-title reveal" id="checkout-title">Secure Checkout</h1>
+    <p class="section-copy reveal">Complete payment securely while handling jewellery and bullion order requirements.</p>
+  </div>
+</section>
+
+<section class="section checkout-flow-section" aria-label="Checkout form">
+  <div class="container checkout-flow-grid">
+    <form class="checkout-form reveal">
+      <section class="checkout-form-block" aria-labelledby="customer-details-title">
+        <h2 id="customer-details-title">Customer Details</h2>
+        <div class="checkout-field-grid">
+          <div class="field"><label for="checkout-name">Name</label><input id="checkout-name" type="text" value="Amara Singh"></div>
+          <div class="field"><label for="checkout-email">Email</label><input id="checkout-email" type="email" value="amara@example.com"></div>
+          <div class="field"><label for="checkout-phone">Phone</label><input id="checkout-phone" type="tel" value="+61 400 000 000"></div>
+        </div>
+      </section>
+
+      <section class="checkout-form-block" aria-labelledby="shipping-title">
+        <h2 id="shipping-title">Shipping / Pickup Option</h2>
+        <div class="option-grid">
+          <label class="checkout-option"><input type="radio" name="shipping" checked><span>Delivery</span></label>
+          <label class="checkout-option"><input type="radio" name="shipping"><span>Pickup</span></label>
+          <label class="checkout-option"><input type="radio" name="shipping"><span>Insured delivery for bullion, if applicable</span></label>
+        </div>
+      </section>
+
+      <section class="checkout-form-block" aria-labelledby="payment-title">
+        <h2 id="payment-title">Payment Method</h2>
+        <div class="option-grid">
+          <label class="checkout-option"><input type="radio" name="payment" checked><span>Stripe card payment</span></label>
+          <label class="checkout-option"><input type="radio" name="payment"><span>Bank transfer, if enabled</span></label>
+        </div>
+      </section>
+
+      <section class="checkout-form-block bullion-checkout-logic" aria-labelledby="bullion-logic-title">
+        <h2 id="bullion-logic-title">Bullion Checkout Logic</h2>
+        <div class="checkout-message warning">
+          <span>Verification Required Message</span>
+          <p>Your account must be verified before bullion checkout can be completed.</p>
+        </div>
+        <div class="checkout-message success">
+          <span>Price Lock Message</span>
+          <p>Your bullion price has been locked for 10 minutes. Please complete payment before the timer expires.</p>
+        </div>
+      </section>
+    </form>
+
+    <aside class="checkout-review-panel reveal">
+      <span class="kicker">Order Review</span>
+      <div class="checkout-product-list">
+        <div>
+          <span>Emerald Grace Ring</span>
+          <strong>AUD 3,850.00</strong>
+        </div>
+        <div>
+          <span>10g Gold Bullion Bar</span>
+          <strong>AUD 2,005.00</strong>
+        </div>
+      </div>
+      <dl>
+        <div><dt>Final price</dt><dd>AUD 5,855.00</dd></div>
+        <div><dt>Delivery option</dt><dd>Insured delivery</dd></div>
+        <div class="summary-total"><dt>Total amount</dt><dd>AUD 5,923.00</dd></div>
+      </dl>
+      <button class="btn btn-primary" type="button">Place Order / Pay Securely</button>
+    </aside>
+  </div>
+</section>
 </main>
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img class="footer-logo" src="../../assets/iconic/iconic-jewellery-logo-dark-cropped.jpeg" alt="Iconic Jewellery">
+        <img class="footer-logo" src="../assets/iconic/iconic-jewellery-logo-dark-cropped.jpeg" alt="Iconic Jewellery">
         <h2>Luxury retail, secured for bullion-grade trust.</h2>
       </div>
       <div>
@@ -109,6 +169,6 @@
     </div>
   </div>
 </footer>
-<script src="../site.js"></script>
+<script src="../site.js?v=20260603-newsletter"></script>
 </body>
 </html>

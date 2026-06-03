@@ -32,7 +32,7 @@
       <li><a href="../serial-verification/">Verify</a></li>
     </ul>
     <a class="brand" href="../" aria-label="Iconic Jewellery home">
-      <img class="brand-logo" src="../../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery">
+      <img class="brand-logo" src="../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery">
     </a>
     <div class="nav-actions">
       <a href="../account/">Account</a>
@@ -44,7 +44,7 @@
 </header>
 <div class="mobile-menu-panel" id="mobile-menu" aria-hidden="true">
   <div class="mobile-menu-head">
-    <a class="brand" href="../" aria-label="Iconic Jewellery home"><img class="brand-logo" src="../../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery"></a>
+    <a class="brand" href="../" aria-label="Iconic Jewellery home"><img class="brand-logo" src="../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery"></a>
     <button class="mobile-menu-close" type="button">Close</button>
   </div>
   <nav aria-label="Mobile navigation">
@@ -64,27 +64,90 @@
   </nav>
 </div>
 <main id="top">
-<section class="page-intro"><div class="container"><span class="kicker">KYC review</span><h1 class="section-title">Verification / Document Upload</h1><p class="section-copy">Upload identity and address documents for bullion portal review in a calm, secure customer flow.</p></div></section><section class="section"><div class="container"><div class="page-gallery"><article class="screen reveal">
-          <div class="screen-header">
-            <h3>Document Upload</h3>
-            <span class="status-pill" style="color:var(--green);border-color:rgba(5,5,5,0.25)">Pending review</span>
-          </div>
-          <div class="screen-body">
-            <div class="upload-panel">
-              <div class="form-grid">
-                <div class="field"><label for="doc-type">Document type</label><select id="doc-type"><option>Driver licence</option><option>Passport</option><option>Proof of address</option></select></div>
-                <div class="file-drop">Drag identity document here or choose a file</div>
-                <button class="btn btn-primary" type="button">Submit for Verification</button>
-              </div>
-            </div>
-          </div>
-        </article></div></div></section>
+<section class="verification-hero" aria-labelledby="verification-title">
+  <div class="container verification-hero-inner">
+    <span class="kicker reveal">Verification / Document Upload</span>
+    <h1 class="section-title reveal" id="verification-title">Bullion Account Verification</h1>
+    <p class="section-copy reveal">To access bullion purchasing, customers must complete identity verification for security and compliance purposes.</p>
+  </div>
+</section>
+
+<section class="section verification-steps-section" aria-labelledby="steps-title">
+  <div class="container">
+    <div class="section-center">
+      <span class="kicker reveal">Verification Steps</span>
+      <h2 class="section-title reveal" id="steps-title">Complete Verification</h2>
+    </div>
+    <div class="verification-steps-grid">
+      <article class="verification-step reveal"><span>Step 1</span><h3>Create customer account</h3></article>
+      <article class="verification-step reveal"><span>Step 2</span><h3>Upload required documents or complete GBG verification</h3></article>
+      <article class="verification-step reveal"><span>Step 3</span><h3>Admin reviews verification</h3></article>
+      <article class="verification-step reveal"><span>Step 4</span><h3>Account approved for bullion purchase</h3></article>
+    </div>
+  </div>
+</section>
+
+<section class="section document-upload-section" aria-labelledby="upload-title">
+  <div class="container document-upload-grid">
+    <div>
+      <span class="kicker reveal">Document Upload Fields</span>
+      <h2 class="section-title reveal" id="upload-title">Required Documents</h2>
+      <p class="section-copy reveal">Upload identity and address documents, or complete GBG verification when the final integration is enabled.</p>
+    </div>
+    <form class="document-upload-form reveal">
+      <div class="document-field">
+        <label for="passport">Passport</label>
+        <input id="passport" type="file">
+        <button class="btn btn-secondary btn-small" type="button">Upload Document</button>
+      </div>
+      <div class="document-field">
+        <label for="driver-licence">Driver Licence</label>
+        <input id="driver-licence" type="file">
+        <button class="btn btn-secondary btn-small" type="button">Upload Document</button>
+      </div>
+      <div class="document-field">
+        <label for="proof-address">Proof of Address</label>
+        <input id="proof-address" type="file">
+        <button class="btn btn-secondary btn-small" type="button">Upload Document</button>
+      </div>
+      <div class="document-field">
+        <label for="company-documents">Company Documents, if business customer</label>
+        <input id="company-documents" type="file">
+        <button class="btn btn-secondary btn-small" type="button">Upload Document</button>
+      </div>
+      <button class="btn btn-primary" type="button">Submit for Review</button>
+    </form>
+  </div>
+</section>
+
+<section class="verification-status-messages-section" aria-labelledby="messages-title">
+  <div class="container">
+    <div class="section-center">
+      <span class="kicker reveal">Status Message</span>
+      <h2 class="section-title reveal" id="messages-title">Verification Updates</h2>
+    </div>
+    <div class="verification-message-grid">
+      <article class="verification-message-card reveal">
+        <span>Pending</span>
+        <p>Your documents have been submitted and are pending admin review.</p>
+      </article>
+      <article class="verification-message-card approved reveal">
+        <span>Approved</span>
+        <p>Your bullion account has been approved. You can now purchase bullion.</p>
+      </article>
+      <article class="verification-message-card rejected reveal">
+        <span>Rejected</span>
+        <p>Your verification was not approved. Please contact support or upload updated documents.</p>
+      </article>
+    </div>
+  </div>
+</section>
 </main>
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img class="footer-logo" src="../../assets/iconic/iconic-jewellery-logo-dark-cropped.jpeg" alt="Iconic Jewellery">
+        <img class="footer-logo" src="../assets/iconic/iconic-jewellery-logo-dark-cropped.jpeg" alt="Iconic Jewellery">
         <h2>Luxury retail, secured for bullion-grade trust.</h2>
       </div>
       <div>
@@ -113,6 +176,6 @@
     </div>
   </div>
 </footer>
-<script src="../site.js"></script>
+<script src="../site.js?v=20260603-newsletter"></script>
 </body>
 </html>

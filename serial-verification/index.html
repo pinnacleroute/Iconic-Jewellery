@@ -32,7 +32,7 @@
       <li><a href="../serial-verification/">Verify</a></li>
     </ul>
     <a class="brand" href="../" aria-label="Iconic Jewellery home">
-      <img class="brand-logo" src="../../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery">
+      <img class="brand-logo" src="../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery">
     </a>
     <div class="nav-actions">
       <a href="../account/">Account</a>
@@ -44,7 +44,7 @@
 </header>
 <div class="mobile-menu-panel" id="mobile-menu" aria-hidden="true">
   <div class="mobile-menu-head">
-    <a class="brand" href="../" aria-label="Iconic Jewellery home"><img class="brand-logo" src="../../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery"></a>
+    <a class="brand" href="../" aria-label="Iconic Jewellery home"><img class="brand-logo" src="../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery"></a>
     <button class="mobile-menu-close" type="button">Close</button>
   </div>
   <nav aria-label="Mobile navigation">
@@ -64,47 +64,62 @@
   </nav>
 </div>
 <main id="top">
-<section class="section green-band" id="verify">
-    <div class="container">
-      <div class="split-heading">
-        <div>
-          <span class="kicker reveal">Barcode and serial verification</span>
-          <h2 class="section-title reveal">Verify a bullion item before trust is assumed.</h2>
-        </div>
-        <p class="section-copy reveal">A dedicated verification surface keeps customer confidence high and supports future barcode scanner integrations, certificate matching, and suspicious lookup flags.</p>
-      </div>
-      <div class="screen reveal">
-        <div class="screen-header">
-          <h3>Verification Result</h3>
-          <span class="status-pill" style="color:var(--green);border-color:rgba(5,5,5,0.25)">Match found</span>
-        </div>
-        <div class="screen-body">
-          <div class="verify-box">
-            <input value="IB-24K-094482-AU">
-            <button class="btn btn-primary" type="button">Verify Serial</button>
-          </div>
-          <div class="result-card">
-            <span class="kicker">Authenticated bullion item</span>
-            <div class="barcode" aria-hidden="true"></div>
-            <table class="table">
-              <tbody>
-                <tr><th>Serial</th><td>IB-24K-094482-AU</td></tr>
-                <tr><th>Product</th><td>1oz Gold Cast Bar, 99.99 percent purity</td></tr>
-                <tr><th>Certificate</th><td>Matched to vault record and invoice IJ-24018</td></tr>
-                <tr><th>Status</th><td>Valid, not reported sold outside Iconic custody</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
+<section class="serial-hero" aria-labelledby="serial-title">
+  <div class="container serial-hero-inner">
+    <span class="kicker reveal">Barcode / Serial Verification</span>
+    <h1 class="section-title reveal" id="serial-title">Verify Your Item</h1>
+    <p class="section-copy reveal">Enter your product serial number or scan the QR/barcode to verify item authenticity and registration status.</p>
+  </div>
+</section>
+
+<section class="section serial-lookup-section" aria-labelledby="lookup-title">
+  <div class="container serial-lookup-grid">
+    <div>
+      <span class="kicker reveal">Verification Input</span>
+      <h2 class="section-title reveal" id="lookup-title">Serial Lookup</h2>
+      <p class="section-copy reveal">Use the product serial number, barcode, or QR code record shown on your certificate or product packaging.</p>
     </div>
-  </section>
+    <form class="serial-lookup-form reveal">
+      <label for="serial-number">Serial number</label>
+      <div class="serial-input-row">
+        <input id="serial-number" type="text" placeholder="Enter serial number" value="IJG-10G-28491">
+        <button class="btn btn-primary" type="button">Verify Item</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="section serial-results-section" aria-label="Verification results">
+  <div class="container serial-results-grid">
+    <article class="serial-result-card valid reveal">
+      <span class="kicker">Verification Result: Valid</span>
+      <h2 class="section-title">Item Verified</h2>
+      <div class="barcode" aria-hidden="true"></div>
+      <dl>
+        <div><dt>Product name</dt><dd>10g Gold Bullion Bar</dd></div>
+        <div><dt>Product type</dt><dd>Bullion</dd></div>
+        <div><dt>Metal type</dt><dd>Gold</dd></div>
+        <div><dt>Weight/purity</dt><dd>10 grams / 999.9 Fine Gold</dd></div>
+        <div><dt>Serial number</dt><dd>IJG-10G-28491</dd></div>
+        <div><dt>Status</dt><dd>Active and verified</dd></div>
+        <div><dt>Verification timestamp</dt><dd>03 Jun 2026, 09:42 AM</dd></div>
+      </dl>
+    </article>
+
+    <article class="serial-result-card invalid reveal">
+      <span class="kicker">Verification Result: Invalid</span>
+      <h2 class="section-title">Item Not Found</h2>
+      <p class="section-copy">The serial number entered does not match an active record. Please check the number or contact support.</p>
+      <a class="btn btn-secondary" href="../account/">Contact Support</a>
+    </article>
+  </div>
+</section>
 </main>
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img class="footer-logo" src="../../assets/iconic/iconic-jewellery-logo-dark-cropped.jpeg" alt="Iconic Jewellery">
+        <img class="footer-logo" src="../assets/iconic/iconic-jewellery-logo-dark-cropped.jpeg" alt="Iconic Jewellery">
         <h2>Luxury retail, secured for bullion-grade trust.</h2>
       </div>
       <div>
@@ -133,6 +148,6 @@
     </div>
   </div>
 </footer>
-<script src="../site.js"></script>
+<script src="../site.js?v=20260603-newsletter"></script>
 </body>
 </html>

@@ -32,7 +32,7 @@
       <li><a href="../serial-verification/">Verify</a></li>
     </ul>
     <a class="brand" href="../" aria-label="Iconic Jewellery home">
-      <img class="brand-logo" src="../../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery">
+      <img class="brand-logo" src="../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery">
     </a>
     <div class="nav-actions">
       <a href="../account/">Account</a>
@@ -44,7 +44,7 @@
 </header>
 <div class="mobile-menu-panel" id="mobile-menu" aria-hidden="true">
   <div class="mobile-menu-head">
-    <a class="brand" href="../" aria-label="Iconic Jewellery home"><img class="brand-logo" src="../../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery"></a>
+    <a class="brand" href="../" aria-label="Iconic Jewellery home"><img class="brand-logo" src="../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery"></a>
     <button class="mobile-menu-close" type="button">Close</button>
   </div>
   <nav aria-label="Mobile navigation">
@@ -64,62 +64,144 @@
   </nav>
 </div>
 <main id="top">
-<section class="section green-band" id="bullion">
-    <div class="container">
-      <div class="bullion-layout">
-        <div>
-          <span class="kicker reveal">Bullion portal</span>
-          <h2 class="section-title reveal">Secure bullion trading without a cold technical interface.</h2>
-          <p class="section-copy reveal">The bullion experience is protected, precise, and calm. Verified customers can see live prices, premiums, serialised stock, document status, and checkout requirements before purchasing.</p>
-          <div class="portal-cards">
-            <article class="trust-card reveal">
-              <div class="trust-icon">01</div>
-              <h3>KYC first</h3>
-              <p>Identity and address checks gate restricted bullion products.</p>
-            </article>
-            <article class="trust-card reveal">
-              <div class="trust-icon">02</div>
-              <h3>Serial audit</h3>
-              <p>Every bar can be barcode searched and certificate matched.</p>
-            </article>
-            <article class="trust-card reveal">
-              <div class="trust-icon">03</div>
-              <h3>Admin controls</h3>
-              <p>Price premiums, review queues, and order locks are controlled centrally.</p>
-            </article>
-          </div>
-        </div>
-        <div class="bullion-board reveal">
-          <div class="market-row">
-            <div><h3>1oz Gold Cast Bar</h3><span>ABC Bullion, 99.99 percent purity</span></div>
-            <strong>AUD 5,291.80</strong>
-            <span class="status-pill">Available</span>
-          </div>
-          <div class="market-row">
-            <div><h3>10oz Silver Bar</h3><span>Serial range AGS-4421 to AGS-4480</span></div>
-            <strong>AUD 642.00</strong>
-            <span class="status-pill">KYC</span>
-          </div>
-          <div class="market-row">
-            <div><h3>Gold Sovereign Coin</h3><span>Vault pickup or insured delivery</span></div>
-            <strong>AUD 1,229.40</strong>
-            <span class="status-pill">Limited</span>
-          </div>
-          <div class="market-row">
-            <div><h3>Portfolio Reserve</h3><span>High-value order by approval</span></div>
-            <strong>Quote</strong>
-            <span class="status-pill">Review</span>
-          </div>
-        </div>
+<section class="bullion-hero" aria-labelledby="bullion-title">
+  <div class="container bullion-hero-inner">
+    <div class="bullion-hero-copy">
+      <span class="kicker reveal">Verified Bullion Portal</span>
+      <h1 class="display reveal" id="bullion-title">Secure Bullion Trading</h1>
+      <p class="reveal">Access investment-grade bullion with live gold pricing, verified customer approval, and secure checkout.</p>
+      <div class="hero-actions reveal">
+        <a class="btn btn-gold" href="../bullion-product/">View Bullion Products</a>
+        <a class="btn btn-outline" href="../verification/">Start Verification</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<section class="section live-gold-section" aria-labelledby="live-gold-title">
+  <div class="container live-gold-grid">
+    <div>
+      <span class="kicker reveal">Market Data</span>
+      <h2 class="section-title reveal" id="live-gold-title">Live Gold Price</h2>
+      <p class="section-copy reveal">Prices are subject to market movement and final confirmation at checkout.</p>
+    </div>
+    <aside class="bullion-price-card reveal" aria-label="Live gold price">
+      <div class="price-card-head">
+        <span class="kicker">Gold Price</span>
+        <span class="live-dot" aria-hidden="true"></span>
+      </div>
+      <strong>AUD 200.50 / gram</strong>
+      <dl>
+        <div><dt>Market Source</dt><dd>MetalpriceAPI / Approved Provider</dd></div>
+        <div><dt>Last Updated</dt><dd>03 Jun 2026, 09:42 AM</dd></div>
+        <div><dt>Next Refresh</dt><dd>Every 5 minutes</dd></div>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="verification-notice-section" aria-labelledby="verification-title">
+  <div class="container verification-notice">
+    <div>
+      <span class="kicker reveal">Verification Notice</span>
+      <h2 class="section-title reveal" id="verification-title">Verification Required Before Purchase</h2>
+      <p class="section-copy reveal">To purchase bullion, customers must complete identity verification and receive admin approval before checkout access is enabled.</p>
+    </div>
+    <a class="btn btn-gold reveal" href="../verification/">Complete Verification</a>
+  </div>
+</section>
+
+<section class="section bullion-products-section" aria-labelledby="bullion-products-title">
+  <div class="container">
+    <div class="split-heading">
+      <div>
+        <span class="kicker reveal">Bullion Products</span>
+        <h2 class="section-title reveal" id="bullion-products-title">Investment-Grade Gold Bullion</h2>
+      </div>
+      <p class="section-copy reveal">Browse live-priced bullion products. Purchase access is available after customer verification approval.</p>
+    </div>
+    <div class="bullion-product-grid">
+      <article class="bullion-product-card reveal">
+        <div class="bullion-product-image bullion-1g"></div>
+        <div class="bullion-product-info">
+          <span class="status-pill">Verification Required</span>
+          <h3>1g Gold Bullion Bar</h3>
+          <dl>
+            <div><dt>Weight</dt><dd>1g</dd></div>
+            <div><dt>Purity</dt><dd>99.99%</dd></div>
+          </dl>
+          <strong>AUD 200.50</strong>
+          <a class="btn btn-primary btn-small" href="../bullion-product/">View Details</a>
+        </div>
+      </article>
+
+      <article class="bullion-product-card reveal">
+        <div class="bullion-product-image bullion-5g"></div>
+        <div class="bullion-product-info">
+          <span class="status-pill">Verification Required</span>
+          <h3>5g Gold Bullion Bar</h3>
+          <dl>
+            <div><dt>Weight</dt><dd>5g</dd></div>
+            <div><dt>Purity</dt><dd>99.99%</dd></div>
+          </dl>
+          <strong>AUD 1,002.50</strong>
+          <a class="btn btn-primary btn-small" href="../bullion-product/">View Details</a>
+        </div>
+      </article>
+
+      <article class="bullion-product-card reveal">
+        <div class="bullion-product-image bullion-10g"></div>
+        <div class="bullion-product-info">
+          <span class="status-pill">Verification Required</span>
+          <h3>10g Gold Bullion Bar</h3>
+          <dl>
+            <div><dt>Weight</dt><dd>10g</dd></div>
+            <div><dt>Purity</dt><dd>99.99%</dd></div>
+          </dl>
+          <strong>AUD 2,005.00</strong>
+          <a class="btn btn-primary btn-small" href="../bullion-product/">View Details</a>
+        </div>
+      </article>
+
+      <article class="bullion-product-card reveal">
+        <div class="bullion-product-image bullion-1oz"></div>
+        <div class="bullion-product-info">
+          <span class="status-pill">Verification Required</span>
+          <h3>1oz Gold Bullion Bar</h3>
+          <dl>
+            <div><dt>Weight</dt><dd>31.1g</dd></div>
+            <div><dt>Purity</dt><dd>99.99%</dd></div>
+          </dl>
+          <strong>AUD 6,235.69</strong>
+          <a class="btn btn-primary btn-small" href="../bullion-product/">View Details</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section bullion-trust-section" aria-labelledby="bullion-trust-title">
+  <div class="container">
+    <div class="section-center">
+      <span class="kicker reveal">Trust Section</span>
+      <h2 class="section-title reveal" id="bullion-trust-title">Built for Secure Bullion Purchases</h2>
+    </div>
+    <div class="bullion-trust-grid">
+      <article class="home-trust-card reveal"><span>01</span><h3>Live market-based pricing</h3></article>
+      <article class="home-trust-card reveal"><span>02</span><h3>Admin-controlled margin</h3></article>
+      <article class="home-trust-card reveal"><span>03</span><h3>Price lock timer at checkout</h3></article>
+      <article class="home-trust-card reveal"><span>04</span><h3>Customer verification required</h3></article>
+      <article class="home-trust-card reveal"><span>05</span><h3>Barcode/serial verification</h3></article>
+      <article class="home-trust-card reveal"><span>06</span><h3>Pickup or insured delivery</h3></article>
+    </div>
+  </div>
+</section>
 </main>
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img class="footer-logo" src="../../assets/iconic/iconic-jewellery-logo-dark-cropped.jpeg" alt="Iconic Jewellery">
+        <img class="footer-logo" src="../assets/iconic/iconic-jewellery-logo-dark-cropped.jpeg" alt="Iconic Jewellery">
         <h2>Luxury retail, secured for bullion-grade trust.</h2>
       </div>
       <div>
@@ -148,6 +230,6 @@
     </div>
   </div>
 </footer>
-<script src="../site.js"></script>
+<script src="../site.js?v=20260603-newsletter"></script>
 </body>
 </html>

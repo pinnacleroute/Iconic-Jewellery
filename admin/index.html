@@ -32,7 +32,7 @@
       <li><a href="../serial-verification/">Verify</a></li>
     </ul>
     <a class="brand" href="../" aria-label="Iconic Jewellery home">
-      <img class="brand-logo" src="../../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery">
+      <img class="brand-logo" src="../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery">
     </a>
     <div class="nav-actions">
       <a href="../account/">Account</a>
@@ -44,7 +44,7 @@
 </header>
 <div class="mobile-menu-panel" id="mobile-menu" aria-hidden="true">
   <div class="mobile-menu-head">
-    <a class="brand" href="../" aria-label="Iconic Jewellery home"><img class="brand-logo" src="../../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery"></a>
+    <a class="brand" href="../" aria-label="Iconic Jewellery home"><img class="brand-logo" src="../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery"></a>
     <button class="mobile-menu-close" type="button">Close</button>
   </div>
   <nav aria-label="Mobile navigation">
@@ -64,58 +64,118 @@
   </nav>
 </div>
 <main id="top">
-<section class="section" id="admin">
-    <div class="container">
-      <div class="split-heading">
-        <div>
-          <span class="kicker reveal">Admin dashboard direction</span>
-          <h2 class="section-title reveal">Operational control for high-value commerce.</h2>
-        </div>
-        <p class="section-copy reveal">Admin tools are restrained and dense: document review, price controls, customer approvals, serial management, and order oversight are visible without becoming overly technical.</p>
+<section class="admin-hero" aria-labelledby="admin-title">
+  <div class="container admin-hero-inner">
+    <span class="kicker reveal">Admin Dashboard</span>
+    <h1 class="section-title reveal" id="admin-title">Admin Control Centre</h1>
+    <p class="section-copy reveal">Manage products, customers, orders, bullion pricing, verification, serial records, and website content from one operational view.</p>
+  </div>
+</section>
+
+<section class="section admin-overview-section" aria-labelledby="overview-title">
+  <div class="container">
+    <div class="split-heading">
+      <div>
+        <span class="kicker reveal">Dashboard Overview</span>
+        <h2 class="section-title reveal" id="overview-title">Operational Snapshot</h2>
       </div>
-      <article class="screen screen-wide reveal">
-        <div class="screen-header">
-          <h3>Admin Management</h3>
-          <div class="mini-row">
-            <span class="mini-badge">Price control</span>
-            <span class="mini-badge">Document review</span>
-            <span class="mini-badge">Serial manager</span>
-          </div>
-        </div>
-        <div class="dashboard">
-          <aside class="sidebar">
-            <strong>Admin</strong>
-            <a class="side-link" href="../admin/">Overview</a>
-            <a class="side-link" href="../admin/">Bullion pricing</a>
-            <a class="side-link" href="../admin/">KYC queue</a>
-            <a class="side-link" href="../admin/">Inventory</a>
-          </aside>
-          <div class="dash-content">
-            <div class="dash-metrics">
-              <div class="metric"><span>KYC queue</span><strong>18</strong></div>
-              <div class="metric"><span>Locked orders</span><strong>07</strong></div>
-              <div class="metric"><span>Premium</span><strong>3.2%</strong></div>
-              <div class="metric"><span>Serial alerts</span><strong>02</strong></div>
-            </div>
-            <table class="table">
-              <thead><tr><th>Task</th><th>Owner</th><th>Status</th><th>Action</th></tr></thead>
-              <tbody>
-                <tr><td>Review passport upload</td><td>A. Patel</td><td>Pending</td><td><button class="btn btn-primary btn-small" type="button">Review</button></td></tr>
-                <tr><td>Update gold premium</td><td>Market desk</td><td>Scheduled</td><td><button class="btn btn-secondary btn-small" type="button">Edit</button></td></tr>
-                <tr><td>Register serial batch</td><td>Vault</td><td>Ready</td><td><button class="btn btn-secondary btn-small" type="button">Import</button></td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </article>
+      <p class="section-copy reveal">A quick view of commerce, verification, bullion pricing, and marketing activity.</p>
     </div>
-  </section>
+    <div class="admin-metric-grid">
+      <article class="admin-metric-card reveal"><span>Total Orders</span><strong>128</strong></article>
+      <article class="admin-metric-card reveal"><span>Jewellery Products</span><strong>64</strong></article>
+      <article class="admin-metric-card reveal"><span>Bullion Products</span><strong>18</strong></article>
+      <article class="admin-metric-card reveal"><span>Pending Verifications</span><strong>12</strong></article>
+      <article class="admin-metric-card reveal"><span>Latest Gold Price</span><strong>AUD 200.50/g</strong></article>
+      <article class="admin-metric-card reveal"><span>Newsletter Subscribers</span><strong>2,480</strong></article>
+    </div>
+  </div>
+</section>
+
+<section class="section admin-management-section" aria-label="Admin management modules">
+  <div class="container admin-module-grid">
+    <article class="admin-module-card reveal">
+      <span class="kicker">Product Management</span>
+      <h2>Product Management</h2>
+      <ul>
+        <li>Add/edit/delete jewellery products</li>
+        <li>Add/edit/delete bullion products</li>
+        <li>Upload images</li>
+        <li>Manage categories</li>
+        <li>Manage inventory</li>
+        <li>Set product status</li>
+      </ul>
+    </article>
+
+    <article class="admin-module-card admin-pricing-card reveal">
+      <span class="kicker">Bullion Pricing Controls</span>
+      <h2>Bullion Pricing Controls</h2>
+      <div class="admin-field-grid">
+        <div class="field"><label for="live-gold">Latest live gold price</label><input id="live-gold" value="AUD 200.50 / gram"></div>
+        <div class="field"><label for="updated">Last updated timestamp</label><input id="updated" value="03 Jun 2026, 09:42 AM"></div>
+        <div class="field"><label for="margin">Margin percentage</label><input id="margin" value="3.2%"></div>
+        <div class="field"><label for="premium">Product premium</label><input id="premium" value="AUD 42.00"></div>
+        <div class="field"><label for="handling">Fixed handling fee</label><input id="handling" value="AUD 28.00"></div>
+        <div class="field"><label for="override">Manual override</label><select id="override"><option>Disabled</option><option>Enabled</option></select></div>
+        <div class="field"><label for="bullion-checkout">Enable/disable bullion checkout</label><select id="bullion-checkout"><option>Enabled</option><option>Disabled</option></select></div>
+        <div class="field"><label for="lock-duration">Price lock duration</label><input id="lock-duration" value="10 minutes"></div>
+      </div>
+    </article>
+
+    <article class="admin-module-card reveal">
+      <span class="kicker">Verification Management</span>
+      <h2>Verification Management</h2>
+      <ul>
+        <li>View customer verification requests</li>
+        <li>View uploaded documents</li>
+        <li>Approve/reject verification</li>
+        <li>Add admin notes</li>
+        <li>Update verification status</li>
+      </ul>
+    </article>
+
+    <article class="admin-module-card reveal">
+      <span class="kicker">Barcode / Serial Management</span>
+      <h2>Barcode / Serial Management</h2>
+      <ul>
+        <li>Generate serial number</li>
+        <li>Generate barcode/QR code</li>
+        <li>Assign to product/order</li>
+        <li>Mark status: Active / Sold / Verified / Invalid</li>
+        <li>Search serial records</li>
+      </ul>
+    </article>
+
+    <article class="admin-module-card reveal">
+      <span class="kicker">Order Management</span>
+      <h2>Order Management</h2>
+      <ul>
+        <li>View jewellery orders</li>
+        <li>View bullion orders</li>
+        <li>Update order status</li>
+        <li>View payment status</li>
+        <li>Add order notes</li>
+        <li>Export orders</li>
+      </ul>
+    </article>
+
+    <article class="admin-module-card reveal">
+      <span class="kicker">Newsletter Management</span>
+      <h2>Newsletter Management</h2>
+      <ul>
+        <li>View subscribers</li>
+        <li>Export subscriber list</li>
+        <li>Connect email platform later if required</li>
+      </ul>
+    </article>
+  </div>
+</section>
 </main>
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img class="footer-logo" src="../../assets/iconic/iconic-jewellery-logo-dark-cropped.jpeg" alt="Iconic Jewellery">
+        <img class="footer-logo" src="../assets/iconic/iconic-jewellery-logo-dark-cropped.jpeg" alt="Iconic Jewellery">
         <h2>Luxury retail, secured for bullion-grade trust.</h2>
       </div>
       <div>
@@ -144,6 +204,6 @@
     </div>
   </div>
 </footer>
-<script src="../site.js"></script>
+<script src="../site.js?v=20260603-newsletter"></script>
 </body>
 </html>

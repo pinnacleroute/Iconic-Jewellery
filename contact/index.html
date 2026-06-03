@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login / Register - Iconic Jewellery</title>
-<meta name="description" content="Customer account access for jewellery customers and verified bullion clients.">
+<title>Contact - Iconic Jewellery</title>
+<meta name="description" content="Contact Iconic Jewellery and Bullion for jewellery enquiries, bullion support, appointments, and account assistance.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -60,55 +60,52 @@
     <a href="../checkout/">Checkout</a>
     <a href="../serial-verification/">Serial Verification</a>
     <a href="../admin/">Admin Dashboard</a>
+    <a href="../contact/">Contact</a>
     <a class="mobile-primary" href="../checkout/">Secure Checkout</a>
   </nav>
 </div>
 <main id="top">
-<section class="account-hero" aria-labelledby="account-title">
-  <div class="container account-hero-inner">
-    <span class="kicker reveal">Secure Account</span>
-    <h1 class="section-title reveal" id="account-title">Customer Login / Register</h1>
-    <p class="section-copy reveal">Create an account, log in, reset your password, and access jewellery or verified bullion services.</p>
+<section class="contact-hero" aria-labelledby="contact-title">
+  <div class="container contact-hero-inner">
+    <span class="kicker reveal">Contact Page</span>
+    <h1 class="section-title reveal" id="contact-title">Contact Iconic Jewellery &amp; Bullion</h1>
+    <p class="section-copy reveal">For jewellery enquiries, bullion support, appointments, or account assistance, please contact our team.</p>
   </div>
 </section>
 
-<section class="section account-access-section" aria-label="Account access forms">
-  <div class="container account-access-grid">
-    <article class="account-card account-register reveal">
-      <span class="kicker">Register Section</span>
-      <h2>Create Your Account</h2>
-      <p>Create an account to manage orders, save wishlist items, and access bullion verification.</p>
-      <form class="account-form">
-        <div class="field"><label for="register-name">Full Name</label><input id="register-name" type="text" autocomplete="name"></div>
-        <div class="field"><label for="register-email">Email Address</label><input id="register-email" type="email" autocomplete="email"></div>
-        <div class="field"><label for="register-phone">Phone Number</label><input id="register-phone" type="tel" autocomplete="tel"></div>
-        <div class="field"><label for="register-password">Password</label><input id="register-password" type="password" autocomplete="new-password"></div>
-        <div class="field"><label for="register-confirm-password">Confirm Password</label><input id="register-confirm-password" type="password" autocomplete="new-password"></div>
-        <button class="btn btn-primary" type="button">Create Account</button>
-      </form>
-    </article>
-
-    <article class="account-card account-login reveal">
-      <span class="kicker">Login Section</span>
-      <h2>Welcome Back</h2>
-      <form class="account-form">
-        <div class="field"><label for="login-email">Email Address</label><input id="login-email" type="email" autocomplete="email"></div>
-        <div class="field"><label for="login-password">Password</label><input id="login-password" type="password" autocomplete="current-password"></div>
-        <button class="btn btn-primary" type="button">Login</button>
-      </form>
-      <div class="account-links">
-        <a href="#reset-password">Forgot Password?</a>
-        <a href="#register-name">Create New Account</a>
+<section class="section contact-section" aria-label="Contact form and business details">
+  <div class="container contact-grid">
+    <form class="contact-form reveal">
+      <span class="kicker">Contact Form</span>
+      <h2>Send an Enquiry</h2>
+      <div class="field"><label for="contact-name">Full Name</label><input id="contact-name" type="text" autocomplete="name"></div>
+      <div class="field"><label for="contact-email">Email</label><input id="contact-email" type="email" autocomplete="email"></div>
+      <div class="field"><label for="contact-phone">Phone</label><input id="contact-phone" type="tel" autocomplete="tel"></div>
+      <div class="field">
+        <label for="enquiry-type">Enquiry Type</label>
+        <select id="enquiry-type">
+          <option>Jewellery</option>
+          <option>Bullion</option>
+          <option>Verification</option>
+          <option>Order Support</option>
+          <option>General</option>
+        </select>
       </div>
-    </article>
-  </div>
-</section>
+      <div class="field"><label for="contact-message">Message</label><textarea id="contact-message" rows="6"></textarea></div>
+      <button class="btn btn-primary" type="button">Send Enquiry</button>
+    </form>
 
-<section class="email-verification-section" aria-labelledby="email-verification-title">
-  <div class="container email-verification-card reveal">
-    <span class="kicker">Email Verification Message</span>
-    <h2 class="section-title" id="email-verification-title">Verify Your Email</h2>
-    <p class="section-copy">A verification email has been sent to your registered email address. Please verify your account to continue.</p>
+    <aside class="business-details-card reveal">
+      <span class="kicker">Business Details</span>
+      <h2>Visit or Contact Us</h2>
+      <dl>
+        <div><dt>Address</dt><dd>Level 3, 88 Collins Street, Melbourne VIC 3000</dd></div>
+        <div><dt>Phone</dt><dd>+61 3 9000 0000</dd></div>
+        <div><dt>Email</dt><dd>support@iconicjewellery.example</dd></div>
+        <div><dt>Opening hours</dt><dd>Monday to Friday, 10:00 AM - 6:00 PM</dd></div>
+        <div><dt>Social links</dt><dd><a href="#">Instagram</a> <a href="#">Facebook</a> <a href="#">LinkedIn</a></dd></div>
+      </dl>
+    </aside>
   </div>
 </section>
 </main>
@@ -137,6 +134,7 @@
         <a href="../dashboard/">Customer dashboard</a>
         <a href="../admin/">Admin dashboard</a>
         <a href="../checkout/">Secure checkout</a>
+        <a href="../contact/">Contact</a>
       </div>
     </div>
     <div class="footer-bottom">
