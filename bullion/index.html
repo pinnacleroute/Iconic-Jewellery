@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bullion Portal - Iconic Jewellery</title>
+<meta name="description" content="Secure bullion portal with live prices and verified purchase states.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../site.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="top-strip">
+    <div class="container">
+      <div class="metal-quotes" aria-label="Live bullion prices">
+        <div class="metal-quote"><span>Gold</span><strong>AUD 6,235.69/oz</strong></div>
+        <div class="metal-quote"><span>Silver</span><strong>AUD 104.79/oz</strong></div>
+        <div class="metal-quote"><span>Platinum</span><strong>AUD 2,756.86/oz</strong></div>
+        <div class="metal-quote"><span>FX AUD/USD</span><strong>0.7159</strong></div>
+      </div>
+      <span class="price-refresh"><span class="live-dot" aria-hidden="true"></span>Price refresh 60 sec</span>
+    </div>
+  </div>
+  <nav class="nav container" aria-label="Primary navigation">
+    <ul class="nav-links">
+      <li><a href="../jewellery/">Jewellery</a></li>
+      <li><a href="../bullion/">Bullion</a></li>
+      <li><a href="../dashboard/">Portal</a></li>
+      <li><a href="../serial-verification/">Verify</a></li>
+    </ul>
+    <a class="brand" href="../" aria-label="Iconic Jewellery home">
+      <img class="brand-logo" src="../../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery">
+    </a>
+    <div class="nav-actions">
+      <a href="../account/">Account</a>
+      <a href="../cart/">Cart</a>
+      <a class="btn btn-primary btn-small" href="../checkout/">Secure Checkout</a>
+    </div>
+    <button class="mobile-menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+  </nav>
+</header>
+<div class="mobile-menu-panel" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-head">
+    <a class="brand" href="../" aria-label="Iconic Jewellery home"><img class="brand-logo" src="../../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery"></a>
+    <button class="mobile-menu-close" type="button">Close</button>
+  </div>
+  <nav aria-label="Mobile navigation">
+    <a href="../">Home</a>
+    <a href="../jewellery/">Jewellery Collection</a>
+    <a href="../jewellery-product/">Jewellery Product</a>
+    <a href="../bullion/">Bullion Portal</a>
+    <a href="../bullion-product/">Bullion Product</a>
+    <a href="../account/">Login / Register</a>
+    <a href="../dashboard/">Customer Dashboard</a>
+    <a href="../verification/">Document Upload</a>
+    <a href="../cart/">Cart</a>
+    <a href="../checkout/">Checkout</a>
+    <a href="../serial-verification/">Serial Verification</a>
+    <a href="../admin/">Admin Dashboard</a>
+    <a class="mobile-primary" href="../checkout/">Secure Checkout</a>
+  </nav>
+</div>
+<main id="top">
+<section class="section green-band" id="bullion">
+    <div class="container">
+      <div class="bullion-layout">
+        <div>
+          <span class="kicker reveal">Bullion portal</span>
+          <h2 class="section-title reveal">Secure bullion trading without a cold technical interface.</h2>
+          <p class="section-copy reveal">The bullion experience is protected, precise, and calm. Verified customers can see live prices, premiums, serialised stock, document status, and checkout requirements before purchasing.</p>
+          <div class="portal-cards">
+            <article class="trust-card reveal">
+              <div class="trust-icon">01</div>
+              <h3>KYC first</h3>
+              <p>Identity and address checks gate restricted bullion products.</p>
+            </article>
+            <article class="trust-card reveal">
+              <div class="trust-icon">02</div>
+              <h3>Serial audit</h3>
+              <p>Every bar can be barcode searched and certificate matched.</p>
+            </article>
+            <article class="trust-card reveal">
+              <div class="trust-icon">03</div>
+              <h3>Admin controls</h3>
+              <p>Price premiums, review queues, and order locks are controlled centrally.</p>
+            </article>
+          </div>
+        </div>
+        <div class="bullion-board reveal">
+          <div class="market-row">
+            <div><h3>1oz Gold Cast Bar</h3><span>ABC Bullion, 99.99 percent purity</span></div>
+            <strong>AUD 5,291.80</strong>
+            <span class="status-pill">Available</span>
+          </div>
+          <div class="market-row">
+            <div><h3>10oz Silver Bar</h3><span>Serial range AGS-4421 to AGS-4480</span></div>
+            <strong>AUD 642.00</strong>
+            <span class="status-pill">KYC</span>
+          </div>
+          <div class="market-row">
+            <div><h3>Gold Sovereign Coin</h3><span>Vault pickup or insured delivery</span></div>
+            <strong>AUD 1,229.40</strong>
+            <span class="status-pill">Limited</span>
+          </div>
+          <div class="market-row">
+            <div><h3>Portfolio Reserve</h3><span>High-value order by approval</span></div>
+            <strong>Quote</strong>
+            <span class="status-pill">Review</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" src="../../assets/iconic/iconic-jewellery-logo-dark-cropped.jpeg" alt="Iconic Jewellery">
+        <h2>Luxury retail, secured for bullion-grade trust.</h2>
+      </div>
+      <div>
+        <h3>Jewellery</h3>
+        <a href="../jewellery/">Collections</a>
+        <a href="../jewellery-product/">Product pages</a>
+        <a href="../cart/">Cart</a>
+      </div>
+      <div>
+        <h3>Bullion</h3>
+        <a href="../bullion/">Live pricing</a>
+        <a href="../bullion-product/">Bullion product</a>
+        <a href="../serial-verification/">Serial verification</a>
+        <a href="../verification/">Customer verification</a>
+      </div>
+      <div>
+        <h3>Platform</h3>
+        <a href="../dashboard/">Customer dashboard</a>
+        <a href="../admin/">Admin dashboard</a>
+        <a href="../checkout/">Secure checkout</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Iconic Jewellery MVP mockup</span>
+      <span>Premium custom website concept, not a template storefront</span>
+    </div>
+  </div>
+</footer>
+<script src="../site.js"></script>
+</body>
+</html>
