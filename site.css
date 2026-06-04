@@ -1834,6 +1834,148 @@ textarea {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+.dashboard-detail-hero {
+  min-height: 500px;
+  display: grid;
+  align-items: end;
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(90deg, rgba(255,254,250,0.96), rgba(255,254,250,0.8)),
+    url("https://images.unsplash.com/photo-1512163143273-bde0e3cc7407?auto=format&fit=crop&w=1600&q=84") center/cover;
+}
+.dashboard-detail-hero-inner {
+  padding: clamp(88px, 11vw, 150px) 0 clamp(56px, 7vw, 88px);
+}
+.dashboard-back-link {
+  display: flex;
+  width: max-content;
+  color: var(--green);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+}
+.dashboard-detail-hero .section-title {
+  max-width: 760px;
+  margin: 12px 0 20px;
+}
+.dashboard-detail-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 760px;
+  margin-top: 34px;
+  border: 1px solid var(--line);
+  background: rgba(255,254,250,0.84);
+}
+.dashboard-detail-stats div {
+  padding: 22px;
+  border-left: 1px solid var(--line);
+}
+.dashboard-detail-stats div:first-child {
+  border-left: 0;
+}
+.dashboard-detail-stats strong {
+  display: block;
+  color: var(--green);
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  font-weight: 600;
+  line-height: 1;
+}
+.dashboard-detail-stats span {
+  display: block;
+  color: var(--grey);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+.portal-detail-section {
+  background: var(--paper);
+}
+.portal-detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.36fr);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: start;
+}
+.portal-detail-main .section-title {
+  margin: 10px 0 30px;
+}
+.portal-detail-records {
+  display: grid;
+  border: 1px solid var(--line);
+  background: var(--cream);
+}
+.portal-detail-record {
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr) minmax(180px, 0.6fr) minmax(120px, 0.4fr);
+  gap: 18px;
+  align-items: center;
+  padding: 22px;
+  border-top: 1px solid var(--line);
+}
+.portal-detail-record:first-child {
+  border-top: 0;
+}
+.portal-detail-record span {
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+.portal-detail-record strong {
+  color: var(--charcoal);
+  font-family: var(--serif);
+  font-size: clamp(1.45rem, 2vw, 2rem);
+  font-weight: 600;
+  line-height: 1.05;
+}
+.portal-detail-record em {
+  color: var(--green);
+  font-style: normal;
+  font-weight: 700;
+}
+.portal-detail-record b {
+  color: var(--charcoal);
+  font-weight: 800;
+  text-align: right;
+}
+.portal-detail-side {
+  border: 1px solid var(--green-line);
+  background: var(--green);
+  color: var(--paper);
+  padding: clamp(24px, 3vw, 34px);
+}
+.portal-detail-side h2 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 24px;
+}
+.portal-detail-side ul {
+  display: grid;
+  gap: 16px;
+  list-style: none;
+  margin-bottom: 30px;
+}
+.portal-detail-side li {
+  color: rgba(255,255,255,0.78);
+  border-top: 1px solid rgba(255,255,255,0.16);
+  padding-top: 16px;
+}
+.portal-detail-side li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+.portal-detail-side .btn {
+  width: 100%;
+  background: var(--gold);
+  color: var(--charcoal);
+}
 .verification-status-panel-section {
   background: var(--green);
   color: var(--paper);
@@ -2675,10 +2817,12 @@ textarea {
   }
   .dashboard-card-grid,
   .verification-status-panel,
+  .portal-detail-layout,
   .account-settings-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .verification-status-panel > *,
+  .portal-detail-layout > *,
   .account-settings-grid > * {
     grid-column: 1 / -1;
   }
@@ -2777,8 +2921,26 @@ textarea {
   }
   .dashboard-card-grid,
   .verification-status-panel,
+  .portal-detail-layout,
   .account-settings-grid {
     grid-template-columns: 1fr;
+  }
+  .dashboard-detail-stats {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-detail-stats div {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+  .dashboard-detail-stats div:first-child {
+    border-top: 0;
+  }
+  .portal-detail-record {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .portal-detail-record b {
+    text-align: left;
   }
   .customer-dashboard-card {
     min-height: 190px;

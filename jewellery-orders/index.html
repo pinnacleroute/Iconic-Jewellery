@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Customer Dashboard - Iconic Jewellery</title>
-<meta name="description" content="Customer dashboard for orders, verification status, vault value, and serial records.">
+<title>Jewellery Orders - Iconic Jewellery</title>
+<meta name="description" content="Jewellery order history and order updates for Iconic Jewellery customers.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -96,78 +96,55 @@
   </nav>
 </div>
 <main id="top">
-<section class="dashboard-welcome" aria-labelledby="dashboard-title">
-  <div class="container dashboard-welcome-inner">
-    <span class="kicker reveal">Customer Dashboard</span>
-    <h1 class="section-title reveal" id="dashboard-title">Welcome, Amara Singh</h1>
-    <p class="section-copy reveal">Manage your jewellery orders, bullion verification, wishlist, and account details.</p>
-  </div>
-</section>
-
-<section class="section customer-dashboard-section" aria-label="Dashboard overview">
-  <div class="container">
-    <div class="dashboard-card-grid">
-      <article class="customer-dashboard-card reveal">
-        <span>01</span>
-        <h2>Jewellery Orders</h2>
-        <p>View your jewellery purchase history and order updates.</p>
-        <a href="../jewellery-orders/">View Orders</a>
-      </article>
-      <article class="customer-dashboard-card reveal">
-        <span>02</span>
-        <h2>Bullion Orders</h2>
-        <p>View your bullion purchases and order status.</p>
-        <a href="../bullion-orders/">View Bullion</a>
-      </article>
-      <article class="customer-dashboard-card reveal">
-        <span>03</span>
-        <h2>Verification Status</h2>
-        <p>Track your bullion verification progress.</p>
-        <a href="../verification-status/">View Verification</a>
-      </article>
-      <article class="customer-dashboard-card reveal">
-        <span>04</span>
-        <h2>Wishlist</h2>
-        <p>View your saved jewellery items.</p>
-        <a href="../wishlist/">View Wishlist</a>
-      </article>
+<section class="dashboard-detail-hero" aria-labelledby="jewellery-orders-title">
+  <div class="container dashboard-detail-hero-inner">
+    <a class="dashboard-back-link" href="../dashboard/">Back to Dashboard</a>
+    <span class="kicker reveal">Customer Portal</span>
+    <h1 class="section-title reveal" id="jewellery-orders-title">Jewellery Orders</h1>
+    <p class="section-copy reveal">Review your jewellery purchase history, track order milestones, and access aftercare details for each piece.</p>
+    <div class="dashboard-detail-stats reveal" aria-label="Jewellery Orders summary">
+      <div><strong>3</strong><span>Active orders</span></div>
+      <div><strong>AUD 13,650</strong><span>Jewellery value</span></div>
+      <div><strong>2</strong><span>Care appointments</span></div>
     </div>
   </div>
 </section>
 
-<section class="verification-status-panel-section" aria-labelledby="status-title">
-  <div class="container verification-status-panel reveal">
-    <div>
-      <span class="kicker">Verification Status Panel</span>
-      <h2 class="section-title" id="status-title">Verification Status</h2>
-      <p class="section-copy">Track your bullion approval status and continue verification when additional information is required.</p>
+<section class="section portal-detail-section" aria-labelledby="jewellery-orders-records-title">
+  <div class="container portal-detail-layout">
+    <div class="portal-detail-main reveal">
+      <span class="kicker">Order history</span>
+      <h2 class="section-title" id="jewellery-orders-records-title">Recent jewellery purchases</h2>
+      <div class="portal-detail-records">
+        <article class="portal-detail-record">
+          <span>IJ-24018</span>
+          <strong>Celeste Diamond Necklace</strong>
+          <em>Preparing for dispatch</em>
+          <b>AUD 7,200</b>
+        </article>
+        <article class="portal-detail-record">
+          <span>IJ-24011</span>
+          <strong>Royal Halo Bracelet</strong>
+          <em>Delivered</em>
+          <b>AUD 4,950</b>
+        </article>
+        <article class="portal-detail-record">
+          <span>IJ-23992</span>
+          <strong>Emerald Grace Ring</strong>
+          <em>Care service booked</em>
+          <b>AUD 3,850</b>
+        </article>
+      </div>
     </div>
-    <div class="status-list" aria-label="Possible verification statuses">
-      <span>Not Started</span>
-      <span>Pending Review</span>
-      <span class="active">Approved</span>
-      <span>Rejected</span>
-      <span>More Information Required</span>
-    </div>
-    <a class="btn btn-gold" href="../verification/">View Verification</a>
-  </div>
-</section>
-
-<section class="section account-settings-section" aria-labelledby="settings-title">
-  <div class="container account-settings-grid">
-    <div>
-      <span class="kicker reveal">Account Settings</span>
-      <h2 class="section-title reveal" id="settings-title">Account Settings</h2>
-      <p class="section-copy reveal">Update your contact details, password, and communication preferences.</p>
-    </div>
-    <form class="account-settings-form reveal">
-      <div class="field"><label for="settings-name">Name</label><input id="settings-name" type="text" value="Amara Singh"></div>
-      <div class="field"><label for="settings-email">Email</label><input id="settings-email" type="email" value="amara@example.com"></div>
-      <div class="field"><label for="settings-phone">Phone</label><input id="settings-phone" type="tel" value="+61 400 000 000"></div>
-      <div class="field"><label for="settings-password">Password update</label><input id="settings-password" type="password" placeholder="Enter new password"></div>
-      <label class="newsletter-toggle"><input type="checkbox" checked><span>Newsletter preference</span></label>
-      <button class="btn btn-primary" type="button">Save Settings</button>
-    </form>
+    <aside class="portal-detail-side reveal" aria-labelledby="jewellery-orders-side-title">
+      <h2 id="jewellery-orders-side-title">Order support</h2>
+      <ul>
+          <li>Download invoices</li>
+          <li>Request resizing or repair</li>
+          <li>Book a private collection appointment</li>
+      </ul>
+      <a class="btn btn-primary" href="../jewellery/">Continue Shopping</a>
+    </aside>
   </div>
 </section>
 </main>
@@ -204,8 +181,8 @@
         <h3>Latest from Iconic</h3>
         <p>Be the first to know about new jewellery arrivals, bullion availability, private events, and store updates.</p>
         <form>
-          <label for="footer-email-dashboard">Email</label>
-          <input id="footer-email-dashboard" type="email" placeholder="Email">
+          <label for="footer-email-jewellery-orders">Email</label>
+          <input id="footer-email-jewellery-orders" type="email" placeholder="Email">
           <button type="submit">Sign up</button>
         </form>
         <div class="footer-social" aria-label="Social links">
