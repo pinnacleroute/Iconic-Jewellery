@@ -25,19 +25,56 @@
     </div>
   </div>
   <nav class="nav container" aria-label="Primary navigation">
-    <ul class="nav-links">
-      <li><a href="../jewellery/">Jewellery</a></li>
-      <li><a href="../bullion/">Bullion</a></li>
-      <li><a href="../dashboard/">Portal</a></li>
-      <li><a href="../serial-verification/">Verify</a></li>
+    <div class="nav-utilities" aria-label="Quick actions">
+      <a class="nav-icon-link" href="../design-system/" aria-label="Site index">⌘</a>
+      <a class="nav-icon-link" href="../serial-verification/" aria-label="Serial lookup">⌕</a>
+    </div>
+    <ul class="nav-links nav-links-left">
+      <li><a class="nav-home" href="../" aria-label="Iconic Jewellery home"><span aria-hidden="true"></span></a></li>
+      <li><a href="../dashboard/">About Iconic</a></li>
+      <li class="nav-item has-submenu">
+        <a href="../jewellery/" aria-haspopup="true" aria-expanded="false">Jewellery <span class="submenu-caret" aria-hidden="true"></span></a>
+        <div class="mega-menu" role="menu" aria-label="Jewellery collections">
+          <div class="mega-column">
+            <span>Collections</span>
+            <a href="../jewellery/">New Arrivals</a>
+            <a href="../jewellery/">Rings</a>
+            <a href="../jewellery/">Necklaces</a>
+            <a href="../jewellery/">Bracelets</a>
+          </div>
+          <div class="mega-column">
+            <span>Signature Pieces</span>
+            <a href="../jewellery/">Earrings</a>
+            <a href="../jewellery/">Jewellery Sets</a>
+            <a href="../jewellery-product/">Featured Product</a>
+            <a href="../jewellery/">Gift Guide</a>
+          </div>
+        </div>
+      </li>
     </ul>
     <a class="brand" href="../" aria-label="Iconic Jewellery home">
       <img class="brand-logo" src="../assets/iconic/iconic-jewellery-logo-transparent.png" alt="Iconic Jewellery">
     </a>
+    <ul class="nav-links nav-links-right">
+      <li class="nav-item has-submenu">
+        <a href="../bullion/" aria-haspopup="true" aria-expanded="false">Bullion <span class="submenu-caret" aria-hidden="true"></span></a>
+        <div class="mega-menu compact-menu" role="menu" aria-label="Bullion services">
+          <div class="mega-column">
+            <span>Bullion Desk</span>
+            <a href="../bullion/">Live Gold Pricing</a>
+            <a href="../bullion-product/">Gold Bullion Bars</a>
+            <a href="../verification/">Customer Verification</a>
+            <a href="../serial-verification/">Serial Verification</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="../dashboard/">Portal</a></li>
+      <li><a href="../contact/">Contact</a></li>
+    </ul>
     <div class="nav-actions">
       <a href="../account/">Account</a>
       <a href="../cart/">Cart</a>
-      <a class="btn btn-primary btn-small" href="../checkout/">Secure Checkout</a>
+      <a class="btn btn-primary btn-small" href="../contact/">Book Appointment</a>
     </div>
     <button class="mobile-menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
   </nav>
