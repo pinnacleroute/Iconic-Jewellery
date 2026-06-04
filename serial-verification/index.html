@@ -7,7 +7,7 @@
 <meta name="description" content="Barcode and serial verification for Iconic bullion products.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../site.css">
 <script>document.documentElement.classList.add("js");</script>
 </head>
@@ -32,7 +32,7 @@
       <li><a href="../serial-verification/">Verify</a></li>
     </ul>
     <a class="brand" href="../" aria-label="Iconic Jewellery home">
-      <img class="brand-logo" src="../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery">
+      <img class="brand-logo" src="../assets/iconic/iconic-jewellery-logo-transparent.png" alt="Iconic Jewellery">
     </a>
     <div class="nav-actions">
       <a href="../account/">Account</a>
@@ -44,7 +44,7 @@
 </header>
 <div class="mobile-menu-panel" id="mobile-menu" aria-hidden="true">
   <div class="mobile-menu-head">
-    <a class="brand" href="../" aria-label="Iconic Jewellery home"><img class="brand-logo" src="../assets/iconic/iconic-jewellery-logo-light-cropped.jpeg" alt="Iconic Jewellery"></a>
+    <a class="brand" href="../" aria-label="Iconic Jewellery home"><img class="brand-logo" src="../assets/iconic/iconic-jewellery-logo-transparent.png" alt="Iconic Jewellery"></a>
     <button class="mobile-menu-close" type="button">Close</button>
   </div>
   <nav aria-label="Mobile navigation">
@@ -117,34 +117,53 @@
 </main>
 <footer class="footer">
   <div class="container">
-    <div class="footer-grid">
+    <a class="footer-home-link" href="../">Home</a>
+    <div class="footer-grid home-footer-grid">
       <div>
-        <img class="footer-logo" src="../assets/iconic/iconic-jewellery-logo-dark-cropped.jpeg" alt="Iconic Jewellery">
-        <h2>Luxury retail, secured for bullion-grade trust.</h2>
+        <h3>Client Care</h3>
+        <a href="../contact/">Contact Us</a>
+        <a href="../contact/">Call Now: +61 400 000 000</a>
+        <a href="../jewellery-product/">Product Care &amp; Repair</a>
+        <a href="../contact/">Book an Appointment</a>
+        <a href="../contact/">Frequently Asked Questions</a>
+        <a href="../checkout/">Shipping &amp; Returns</a>
+        <a href="../jewellery/">Jewellery Gift Guide</a>
       </div>
       <div>
-        <h3>Jewellery</h3>
-        <a href="../jewellery/">Collections</a>
-        <a href="../jewellery-product/">Product pages</a>
-        <a href="../cart/">Cart</a>
+        <h3>Our Company</h3>
+        <a href="../dashboard/">About Iconic</a>
+        <a href="../bullion/">Bullion Standards</a>
+        <a href="../design-system/">Website Policies</a>
+        <a href="../design-system/">Site Index</a>
+        <a href="../serial-verification/">Product Safety</a>
       </div>
       <div>
-        <h3>Bullion</h3>
-        <a href="../bullion/">Live pricing</a>
-        <a href="../bullion-product/">Bullion product</a>
-        <a href="../serial-verification/">Serial verification</a>
-        <a href="../verification/">Customer verification</a>
+        <h3>Related Iconic Sites</h3>
+        <a href="../jewellery/">Iconic Jewellery</a>
+        <a href="../bullion/">Iconic Bullion Desk</a>
+        <a href="../bullion-product/">Gold Bullion</a>
+        <a href="../serial-verification/">Verification</a>
       </div>
-      <div>
-        <h3>Platform</h3>
-        <a href="../dashboard/">Customer dashboard</a>
-        <a href="../admin/">Admin dashboard</a>
-        <a href="../checkout/">Secure checkout</a>
+      <div class="footer-newsletter">
+        <h3>Latest from Iconic</h3>
+        <p>Be the first to know about new jewellery arrivals, bullion availability, private events, and store updates.</p>
+        <form>
+          <label for="footer-email-serial-verification">Email</label>
+          <input id="footer-email-serial-verification" type="email" placeholder="Email">
+          <button type="submit">Sign up</button>
+        </form>
+        <div class="footer-social" aria-label="Social links">
+          <a href="../contact/" aria-label="Instagram">◎</a>
+          <a href="../contact/" aria-label="Facebook">f</a>
+          <a href="../contact/" aria-label="Pinterest">p</a>
+          <a href="../contact/" aria-label="X">X</a>
+          <a href="../contact/" aria-label="YouTube">▶</a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>Iconic Jewellery MVP mockup</span>
-      <span>Premium custom website concept, not a template storefront</span>
+      <button class="footer-location" type="button">Change Location: Australia</button>
+      <span>© Iconic Jewellery 2026</span>
     </div>
   </div>
 </footer>
