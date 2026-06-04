@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cart - Iconic Jewellery</title>
-<meta name="description" content="Cart page for jewellery and verified bullion orders.">
+<title>About Iconic - Iconic Jewellery</title>
+<meta name="description" content="Learn about Iconic Jewellery, a refined destination for fine jewellery, live-priced bullion, verification, and private client care.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -90,70 +90,63 @@
     <a href="../checkout/">Checkout</a>
     <a href="../serial-verification/">Serial Verification</a>
     <a href="../admin/">Admin Dashboard</a>
-    <a class="mobile-primary" href="../checkout/">Secure Checkout</a>
+    <a href="../contact/">Contact</a>
+    <a class="mobile-primary" href="../contact/">Book Appointment</a>
   </nav>
 </div>
-<main id="top">
-<section class="cart-hero" aria-labelledby="cart-title">
-  <div class="container cart-hero-inner">
-    <span class="kicker reveal">Order Review</span>
-    <h1 class="section-title reveal" id="cart-title">Cart</h1>
-    <p class="section-copy reveal">Review jewellery and bullion items before secure checkout.</p>
+<main id="top" class="about-page">
+<section class="about-hero" aria-labelledby="about-title">
+  <div class="about-hero-media" aria-hidden="true"></div>
+  <div class="about-hero-copy">
+    <span class="kicker reveal">About Iconic</span>
+    <h1 class="section-title reveal" id="about-title">A house for jewellery, bullion, and verified ownership.</h1>
+    <p class="section-copy reveal">Iconic Jewellery brings fine pieces and investment-grade gold into one calm client experience, balancing considered design with clear records, live pricing, and personal service.</p>
+    <div class="hero-actions reveal">
+      <a class="btn btn-primary" href="../jewellery/">Shop Jewellery</a>
+      <a class="btn btn-secondary" href="../bullion/">Explore Bullion</a>
+    </div>
   </div>
 </section>
 
-<section class="section cart-review-section" aria-label="Cart contents">
-  <div class="container cart-review-grid">
-    <div class="cart-table reveal">
-      <div class="cart-table-head">
-        <span>Product image</span>
-        <span>Product name</span>
-        <span>Type</span>
-        <span>Quantity</span>
-        <span>Price</span>
-        <span>Remove item</span>
-      </div>
-
-      <article class="cart-row">
-        <div class="cart-product-image cart-jewellery-image"></div>
-        <div>
-          <h2>Emerald Grace Ring</h2>
-          <p>18K Gold, Emerald / Diamond</p>
-        </div>
-        <span class="cart-type">Jewellery</span>
-        <input class="cart-quantity" type="number" min="1" value="1" aria-label="Emerald Grace Ring quantity">
-        <strong>AUD 3,850.00</strong>
-        <button class="remove-button" type="button">Remove</button>
-      </article>
-
-      <article class="cart-row">
-        <div class="cart-product-image cart-bullion-image"></div>
-        <div>
-          <h2>10g Gold Bullion Bar</h2>
-          <p>999.9 Fine Gold, live priced</p>
-        </div>
-        <span class="cart-type">Bullion</span>
-        <input class="cart-quantity" type="number" min="1" value="1" aria-label="10g Gold Bullion Bar quantity">
-        <strong>AUD 2,005.00</strong>
-        <button class="remove-button" type="button">Remove</button>
-      </article>
-
-      <div class="bullion-price-notice">
-        <span class="kicker">Bullion Price Notice</span>
-        <p>Bullion prices may refresh before checkout based on live market pricing. Final bullion price will be locked during checkout for a limited time.</p>
-      </div>
+<section class="section about-intro" aria-labelledby="about-intro-title">
+  <div class="container about-intro-grid">
+    <div>
+      <span class="kicker reveal">Our Point of View</span>
+      <h2 class="section-title reveal" id="about-intro-title">Beauty should feel effortless. Trust should feel exact.</h2>
     </div>
+    <div class="about-intro-copy reveal">
+      <p>Every interaction is designed to make the important parts visible: material quality, pricing, verification status, order history, and the care behind each purchase.</p>
+      <p>For jewellery clients, that means a refined collection with private appointment support. For bullion clients, it means transparent live pricing, account approval, and serial-level confidence from purchase to ownership.</p>
+    </div>
+  </div>
+</section>
 
-    <aside class="cart-summary-panel reveal">
-      <span class="kicker">Order Summary</span>
-      <dl>
-        <div><dt>Subtotal</dt><dd>AUD 5,855.00</dd></div>
-        <div><dt>Delivery</dt><dd>AUD 68.00</dd></div>
-        <div><dt>Taxes/fees, if applicable</dt><dd>AUD 0.00</dd></div>
-        <div class="summary-total"><dt>Total</dt><dd>AUD 5,923.00</dd></div>
-      </dl>
-      <a class="btn btn-primary" href="../checkout/">Proceed to Checkout</a>
-    </aside>
+<section class="about-values" aria-label="Iconic Jewellery values">
+  <div class="about-value-panel about-value-jewellery reveal">
+    <span class="kicker">Jewellery</span>
+    <h2>Pieces selected with restraint.</h2>
+    <p>Rings, necklaces, bracelets, earrings, and sets chosen for enduring wear rather than passing noise.</p>
+  </div>
+  <div class="about-value-panel about-value-bullion reveal">
+    <span class="kicker">Bullion</span>
+    <h2>Gold ownership with clarity.</h2>
+    <p>Live market visibility, secure account workflows, documented purity, and serial verification in one connected portal.</p>
+  </div>
+</section>
+
+<section class="section about-standard" aria-labelledby="standard-title">
+  <div class="container about-standard-grid">
+    <div class="about-standard-image reveal" aria-hidden="true"></div>
+    <div class="about-standard-copy reveal">
+      <span class="kicker">The Iconic Standard</span>
+      <h2 class="section-title" id="standard-title">Service, proof, and polish in equal measure.</h2>
+      <ul class="about-checklist">
+        <li><strong>Private client care</strong><span>Appointment-led support for jewellery selection, gifting, and account assistance.</span></li>
+        <li><strong>Verified bullion access</strong><span>Customer verification before purchase, with documents and order status kept clear.</span></li>
+        <li><strong>Traceable ownership</strong><span>Serial lookup and product records help clients confirm item details after purchase.</span></li>
+      </ul>
+      <a class="btn btn-primary" href="../contact/">Book Appointment</a>
+    </div>
   </div>
 </section>
 </main>
@@ -190,8 +183,8 @@
         <h3>Latest from Iconic</h3>
         <p>Be the first to know about new jewellery arrivals, bullion availability, private events, and store updates.</p>
         <form>
-          <label for="footer-email-cart">Email</label>
-          <input id="footer-email-cart" type="email" placeholder="Email">
+          <label for="footer-email-about">Email</label>
+          <input id="footer-email-about" type="email" placeholder="Email">
           <button type="submit">Sign up</button>
         </form>
         <div class="footer-social" aria-label="Social links">
