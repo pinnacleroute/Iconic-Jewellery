@@ -3461,23 +3461,23 @@ textarea {
   margin-top: 30px;
 }
 .home-section-heading {
-  width: min(100% - 40px, 900px);
-  margin: 0 auto clamp(28px, 4vw, 52px);
+  width: min(100% - 32px, 900px);
+  margin: 0 auto clamp(20px, 3vw, 38px);
   text-align: center;
 }
 .home-section-heading .section-title {
   margin-top: 10px;
 }
 .home-product-strip {
-  padding: clamp(72px, 9vw, 132px) 0;
+  padding: clamp(48px, 6vw, 92px) 0;
   background: var(--paper);
 }
 .home-product-row {
-  width: min(100% - 56px, 1240px);
+  width: min(100% - 28px, 1680px);
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px;
+  gap: clamp(8px, 1vw, 16px);
 }
 .home-product-card {
   display: grid;
@@ -3560,15 +3560,15 @@ textarea {
   color: rgba(255,255,255,0.82);
 }
 .home-editorial-grid {
-  width: min(100% - 40px, 1280px);
+  width: min(100% - 24px, 1760px);
   margin: 0 auto;
-  padding: clamp(76px, 10vw, 146px) 0;
+  padding: clamp(42px, 5vw, 84px) 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(14px, 2vw, 24px);
+  gap: clamp(10px, 1.15vw, 18px);
 }
 .editorial-tile {
-  min-height: 500px;
+  min-height: clamp(500px, 34vw, 690px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -3601,7 +3601,7 @@ textarea {
 }
 .editorial-verify {
   grid-column: 1 / -1;
-  min-height: 420px;
+  min-height: clamp(460px, 32vw, 620px);
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -3626,9 +3626,9 @@ textarea {
   grid-template-columns: minmax(0, 1fr) minmax(360px, 0.85fr);
   align-items: center;
   gap: clamp(34px, 7vw, 96px);
-  width: min(100% - 40px, 1180px);
+  width: min(100% - 28px, 1540px);
   margin: 0 auto;
-  padding: clamp(24px, 5vw, 60px) 0 clamp(92px, 12vw, 158px);
+  padding: clamp(20px, 4vw, 52px) 0 clamp(56px, 7vw, 104px);
 }
 .feature-image {
   min-height: clamp(440px, 52vw, 700px);
@@ -3641,15 +3641,15 @@ textarea {
   margin: 18px 0 28px;
 }
 .home-services {
-  padding: clamp(72px, 9vw, 124px) 0;
+  padding: clamp(50px, 6vw, 86px) 0;
   background: #f3f0ea;
 }
 .service-grid {
-  width: min(100% - 56px, 1080px);
+  width: min(100% - 28px, 1500px);
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+  gap: clamp(12px, 1.4vw, 22px);
 }
 .service-card {
   display: grid;
@@ -3660,7 +3660,7 @@ textarea {
 }
 .service-card span {
   width: 100%;
-  aspect-ratio: 1.16 / 1;
+  aspect-ratio: 1.28 / 1;
   display: block;
   margin-bottom: 8px;
   background: #ddd6cb center/cover;
