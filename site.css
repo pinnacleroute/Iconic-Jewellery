@@ -160,6 +160,15 @@ img { display: block; max-width: 100%; }
   list-style: none;
 }
 .nav-links-left {
+  gap: clamp(14px, 1.5vw, 24px);
+}
+.nav-links-right {
+  gap: clamp(20px, 2.1vw, 34px);
+}
+.nav-actions {
+  gap: clamp(18px, 1.8vw, 30px);
+}
+.nav-links-left {
   justify-content: flex-start;
 }
 .nav-links-right,
@@ -192,14 +201,15 @@ img { display: block; max-width: 100%; }
 .nav-actions .btn-primary {
   min-height: 58px;
   border-radius: 999px;
-  padding-inline: clamp(18px, 2.2vw, 34px);
+  min-width: clamp(220px, 18vw, 286px);
+  padding-inline: clamp(24px, 2.7vw, 44px);
   font-size: 0.78rem;
 }
 .brand {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: clamp(132px, 12vw, 190px);
+  width: clamp(124px, 11vw, 180px);
   height: 72px;
   display: flex;
   align-items: center;
