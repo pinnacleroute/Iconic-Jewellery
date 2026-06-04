@@ -108,12 +108,12 @@
   <div class="container">
     <div class="catalogue-toolbar reveal">
       <div class="filter-group" aria-label="Category filters">
-        <button class="filter-chip active" type="button">All</button>
-        <button class="filter-chip" type="button">Rings</button>
-        <button class="filter-chip" type="button">Necklaces</button>
-        <button class="filter-chip" type="button">Bracelets</button>
-        <button class="filter-chip" type="button">Earrings</button>
-        <button class="filter-chip" type="button">Sets</button>
+        <button class="filter-chip active" type="button" data-collection-category="all">All</button>
+        <button class="filter-chip" type="button" data-collection-category="rings">Rings</button>
+        <button class="filter-chip" type="button" data-collection-category="necklaces">Necklaces</button>
+        <button class="filter-chip" type="button" data-collection-category="bracelets">Bracelets</button>
+        <button class="filter-chip" type="button" data-collection-category="earrings">Earrings</button>
+        <button class="filter-chip" type="button" data-collection-category="sets">Sets</button>
       </div>
       <label class="sort-control">
         <span>Sort</span>
@@ -126,7 +126,7 @@
       </label>
     </div>
 
-    <div class="jewellery-product-grid">
+    <div class="jewellery-product-grid" data-collection-grid data-collection-type="jewellery" aria-live="polite">
       <article class="catalogue-card reveal">
         <div class="catalogue-image catalogue-ring">
           <button class="wishlist-button" type="button" aria-label="Add Emerald Grace Ring to wishlist">♡</button>
@@ -260,6 +260,6 @@
     </div>
   </div>
 </footer>
-<script src="../site.js?v=20260604-prices"></script>
+<script src="../site.js?v=20260604-responsive"></script>
 </body>
 </html>

@@ -250,22 +250,32 @@ img { display: block; max-width: 100%; }
 }
 .mega-menu {
   position: absolute;
-  top: calc(100% + 12px);
+  top: calc(100% + 10px);
   left: 50%;
   z-index: 75;
-  width: min(340px, calc(100vw - 48px));
+  width: min(380px, calc(100vw - 48px));
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  border: 1px solid rgba(184,154,94,0.32);
-  border-radius: 16px;
-  background: rgba(255,254,250,0.98);
-  box-shadow: 0 20px 48px rgba(17, 17, 17, 0.12);
+  gap: 18px;
+  border: 1px solid rgba(210,173,101,0.34);
+  border-radius: 0;
+  background:
+    linear-gradient(135deg, rgba(4,43,35,0.97), rgba(12,15,14,0.96));
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
   opacity: 0;
-  padding: 14px;
+  padding: 22px;
   pointer-events: none;
   transform: translate(-50%, 10px);
   transition: opacity 180ms ease, transform 180ms ease;
+}
+.mega-menu::before {
+  content: "";
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #d2ad65, transparent);
 }
 .nav-links-right .mega-menu {
   left: auto;
@@ -283,33 +293,54 @@ img { display: block; max-width: 100%; }
   transform: translateY(0);
 }
 .compact-menu {
-  width: min(230px, calc(100vw - 48px));
+  width: min(280px, calc(100vw - 48px));
   grid-template-columns: 1fr;
 }
 .mega-column {
   display: grid;
   align-content: start;
-  gap: 8px;
+  gap: 6px;
 }
 .mega-column span {
-  color: var(--gold);
+  color: #d2ad65;
   font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
+  font-weight: 800;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
+  margin-bottom: 8px;
 }
 .mega-column a {
   min-height: auto;
-  color: var(--charcoal);
-  font-family: var(--sans);
-  font-size: 0.72rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.78);
+  font-family: var(--serif);
+  font-size: 1.08rem;
   font-weight: 600;
-  letter-spacing: 0.03em;
-  line-height: 1.2;
+  letter-spacing: 0;
+  line-height: 1.1;
+  padding: 10px 0 0;
+  position: relative;
   text-transform: none;
+  transition: color 180ms ease, padding-left 180ms ease;
 }
 .mega-column a:hover {
-  color: var(--green);
+  color: var(--paper);
+  padding-left: 10px;
+}
+.mega-column a:hover::before {
+  opacity: 1;
+}
+.mega-column a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 17px;
+  width: 4px;
+  height: 4px;
+  background: #d2ad65;
+  opacity: 0;
+  transform: rotate(45deg);
+  transition: opacity 180ms ease;
 }
 .mobile-menu-button { display: none; }
 
@@ -4142,5 +4173,624 @@ textarea {
   .footer .footer-bottom span,
   .footer .footer-bottom .footer-location {
     grid-column: auto;
+  }
+}
+
+/* Luxury homepage and global chrome refinement */
+.site-header {
+  position: relative;
+}
+.nav {
+  width: min(100% - 40px, 1440px);
+  min-height: 74px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 10px 0;
+  border-radius: 0;
+}
+.nav-links a,
+.nav-actions a {
+  color: #34302b;
+  text-shadow: none;
+}
+body:has(.iconic-home) .nav-links a,
+body:has(.iconic-home) .nav-actions a {
+  color: #f7f0e6;
+  text-shadow: 0 1px 18px rgba(0,0,0,0.2);
+}
+body:has(.iconic-home) .site-header .brand {
+  filter: brightness(0) invert(1);
+}
+.nav-actions .btn-primary {
+  min-height: 46px;
+  min-width: auto;
+  border: 1px solid rgba(255,255,255,0.28);
+  background: rgba(6,75,59,0.78);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.12);
+  padding-inline: clamp(20px, 2.2vw, 34px);
+}
+.mega-menu {
+  text-shadow: none;
+}
+
+.iconic-home {
+  margin-top: -74px;
+  background: #f5f0e7;
+}
+.luxury-hero {
+  min-height: min(760px, calc(100svh - 38px));
+  display: flex;
+  align-items: center;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(118px, 13vw, 178px) 0 clamp(56px, 7vw, 92px);
+  color: var(--paper);
+  background:
+    linear-gradient(90deg, rgba(2,33,27,0.92) 0%, rgba(2,33,27,0.62) 38%, rgba(2,33,27,0.08) 78%),
+    url("https://images.unsplash.com/photo-1512316609839-ce289d3eba0a?auto=format&fit=crop&w=2200&q=88") center/cover;
+}
+.luxury-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 34%;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(2,33,27,0), rgba(2,33,27,0.44));
+}
+.luxury-hero-content {
+  width: min(100% - 44px, 1440px);
+  margin: 0 auto;
+}
+.luxury-hero .display {
+  max-width: 660px;
+  color: var(--paper);
+  font-size: clamp(3.25rem, 6vw, 6.8rem);
+  line-height: 0.88;
+}
+.luxury-hero em,
+.curated-head em,
+.bullion-command em,
+.legacy-copy em,
+.trust-heading em,
+.newsletter-section em {
+  color: #d2ad65;
+  font-style: italic;
+}
+.luxury-hero p {
+  max-width: 600px;
+  margin-top: 22px;
+  color: rgba(255,255,255,0.78);
+  font-size: clamp(1rem, 1.25vw, 1.13rem);
+}
+.luxury-hero .hero-actions {
+  margin-top: 32px;
+}
+
+.dual-showcase {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.showcase-panel {
+  min-height: clamp(420px, 42vw, 620px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(28px, 5vw, 60px);
+  color: var(--paper);
+}
+.showcase-panel::before,
+.showcase-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  transition: transform 700ms ease;
+}
+.showcase-panel::after {
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(2,33,27,0.04), rgba(2,33,27,0.72));
+}
+.showcase-panel:hover::before {
+  transform: scale(1.04);
+}
+.showcase-jewellery::before {
+  background: url("https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=1500&q=88") center/cover;
+}
+.showcase-bullion::before {
+  background: url("https://images.unsplash.com/photo-1605792657660-596af9009e82?auto=format&fit=crop&w=1500&q=88") center/cover;
+}
+.showcase-panel h2 {
+  max-width: 520px;
+  font-family: var(--serif);
+  font-size: clamp(2.35rem, 5vw, 5.4rem);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 0.95;
+  margin: 9px 0 12px;
+}
+.showcase-panel small,
+.text-link {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.showcase-panel small {
+  color: rgba(255,255,255,0.82);
+}
+
+.curated-section {
+  padding: clamp(70px, 8vw, 118px) 0;
+  background: #f5f0e7;
+}
+.curated-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 28px;
+}
+.curated-head .section-title {
+  max-width: 620px;
+  margin-top: 12px;
+  color: #17140f;
+}
+.text-link {
+  color: var(--green);
+  border-bottom: 1px solid rgba(6,75,59,0.28);
+  padding-bottom: 6px;
+}
+.category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 34px;
+  border-bottom: 1px solid rgba(17,17,17,0.14);
+}
+.category-tabs a,
+.category-tabs button {
+  color: #5c5449;
+  border: 0;
+  background: transparent;
+  padding-bottom: 12px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.category-tabs a:first-child,
+.category-tabs button.active {
+  color: var(--green);
+  border-bottom: 2px solid var(--gold);
+}
+.luxe-product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(18px, 2.2vw, 34px);
+  margin-top: 34px;
+}
+.luxe-product-card {
+  position: relative;
+  display: grid;
+  gap: 7px;
+  color: #17140f;
+}
+.luxe-product-image {
+  width: 100%;
+  aspect-ratio: 0.86 / 1;
+  display: block;
+  margin-bottom: 12px;
+  background-color: #e8dfd2;
+  background-position: center;
+  background-size: cover;
+  filter: saturate(0.92) contrast(1.03);
+}
+.luxe-product-image.product-ring {
+  background-image: url("https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=900&q=88");
+}
+.luxe-product-image.product-necklace {
+  background-image: url("https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=900&q=88");
+}
+.luxe-product-image.product-bracelet {
+  background-image: url("https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=900&q=88");
+}
+.luxe-product-card strong {
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  font-weight: 600;
+  line-height: 1;
+}
+.luxe-product-card small {
+  color: #6a6258;
+}
+.luxe-product-card em {
+  color: var(--green);
+  font-size: 0.74rem;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.product-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  background: var(--green);
+  color: var(--paper);
+  padding: 6px 9px;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.bullion-command {
+  padding: clamp(72px, 9vw, 128px) 0;
+  background:
+    linear-gradient(90deg, rgba(0,80,62,0.97), rgba(0,80,62,0.9)),
+    url("https://images.unsplash.com/photo-1605792657660-596af9009e82?auto=format&fit=crop&w=1800&q=88") center/cover;
+  color: var(--paper);
+}
+.bullion-command-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.62fr);
+  gap: clamp(42px, 7vw, 120px);
+  align-items: center;
+}
+.bullion-command .section-title {
+  max-width: 620px;
+  color: var(--paper);
+}
+.bullion-command p {
+  max-width: 620px;
+  margin: 18px 0 24px;
+  color: rgba(255,255,255,0.76);
+}
+.bullion-command ul {
+  display: grid;
+  gap: 12px;
+  color: rgba(255,255,255,0.86);
+  list-style: none;
+}
+.bullion-command li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  margin-right: 12px;
+  border: 1px solid var(--gold);
+  transform: rotate(45deg);
+}
+.bullion-price-ticket {
+  background: #f8f3ea;
+  color: #17140f;
+  padding: clamp(26px, 4vw, 44px);
+  box-shadow: 0 28px 90px rgba(0,0,0,0.2);
+}
+.price-medallion {
+  width: 34px;
+  height: 34px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--gold);
+  color: #241a0b;
+  font-weight: 800;
+}
+.bullion-price-ticket small {
+  display: block;
+  margin-top: 18px;
+  color: #6a6258;
+}
+.bullion-price-ticket > strong {
+  display: block;
+  color: var(--green);
+  font-family: var(--serif);
+  font-size: clamp(3rem, 5vw, 5.5rem);
+  font-weight: 600;
+  line-height: 0.92;
+  margin: 4px 0 28px;
+}
+.bullion-price-ticket dl {
+  display: grid;
+  border-top: 1px solid rgba(17,17,17,0.12);
+  border-bottom: 1px solid rgba(17,17,17,0.12);
+  margin-bottom: 24px;
+}
+.bullion-price-ticket dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid rgba(17,17,17,0.12);
+  padding: 13px 0;
+}
+.bullion-price-ticket dl div:first-child {
+  border-top: 0;
+}
+.bullion-price-ticket dt {
+  color: #777066;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.bullion-price-ticket dd {
+  color: #17140f;
+  font-weight: 700;
+}
+.bullion-price-ticket .btn {
+  width: 100%;
+}
+
+.legacy-section {
+  padding: clamp(76px, 9vw, 132px) 0;
+  background: #f5f0e7;
+}
+.legacy-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 0.9fr);
+  gap: clamp(44px, 7vw, 104px);
+  align-items: center;
+}
+.legacy-image {
+  min-height: clamp(520px, 54vw, 760px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 24px;
+  background:
+    linear-gradient(180deg, rgba(2,33,27,0.02), rgba(2,33,27,0.2)),
+    url("https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=1300&q=88") center/cover;
+}
+.legacy-image span {
+  background: var(--green);
+  color: var(--paper);
+  padding: 18px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.legacy-copy .section-title {
+  max-width: 620px;
+}
+.legacy-copy p {
+  max-width: 680px;
+  margin: 20px 0 34px;
+  color: #5c5449;
+}
+.legacy-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+.legacy-stats strong {
+  display: block;
+  color: var(--green);
+  font-family: var(--serif);
+  font-size: clamp(1.9rem, 3vw, 3rem);
+  font-weight: 600;
+  line-height: 1;
+}
+.legacy-stats span {
+  color: #6a6258;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.trust-obligation {
+  padding: clamp(80px, 9vw, 132px) 0;
+  background: #0f0f0e;
+  color: var(--paper);
+}
+.trust-heading {
+  max-width: 760px;
+  margin: 0 auto clamp(44px, 6vw, 78px);
+  text-align: center;
+}
+.trust-heading .section-title {
+  color: var(--paper);
+  margin-top: 12px;
+}
+.trust-obligation-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid rgba(255,255,255,0.14);
+  border-left: 1px solid rgba(255,255,255,0.14);
+}
+.trust-obligation-card {
+  min-height: 230px;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  border-right: 1px solid rgba(255,255,255,0.14);
+  border-bottom: 1px solid rgba(255,255,255,0.14);
+  padding: clamp(22px, 3vw, 34px);
+}
+.trust-obligation-card span {
+  color: var(--gold);
+  font-family: var(--serif);
+  font-size: 1.35rem;
+}
+.trust-obligation-card strong {
+  font-family: var(--serif);
+  font-size: clamp(1.55rem, 2vw, 2.25rem);
+  font-weight: 600;
+  line-height: 1;
+}
+.trust-obligation-card p {
+  color: rgba(255,255,255,0.62);
+  font-size: 0.88rem;
+}
+
+.newsletter-section {
+  background: #f5f0e7;
+  color: #17140f;
+}
+.newsletter-section .section-copy {
+  color: #5c5449;
+}
+.newsletter-controls input {
+  border: 1px solid rgba(17,17,17,0.14);
+  border-bottom-color: rgba(17,17,17,0.22);
+  background: transparent;
+  color: #17140f;
+}
+.newsletter-controls input::placeholder {
+  color: #8f877c;
+}
+
+.footer {
+  border-top: 0;
+  background: #00503e;
+  color: var(--paper);
+  padding: clamp(48px, 6vw, 76px) 0 28px;
+}
+.footer-home-link {
+  color: var(--paper);
+  text-align: left;
+}
+.footer-home-link::after {
+  content: "Jewellery, bullion, and verified ownership.";
+  display: block;
+  max-width: 320px;
+  margin-top: 10px;
+  color: rgba(255,255,255,0.62);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+.footer h3 {
+  color: #d2ad65;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.footer a,
+.footer p,
+.footer-location,
+.footer .footer-bottom,
+.footer .footer-bottom span {
+  color: rgba(255,255,255,0.74);
+}
+.footer a:hover {
+  color: var(--paper);
+}
+.footer-newsletter input {
+  border-bottom-color: rgba(255,255,255,0.48);
+  color: var(--paper);
+}
+.footer-newsletter input::placeholder {
+  color: rgba(255,255,255,0.46);
+}
+.footer-newsletter button {
+  border-color: rgba(255,255,255,0.54);
+  color: var(--paper);
+}
+.footer-newsletter button:hover {
+  background: var(--paper);
+  color: var(--green);
+}
+.footer .footer-social a {
+  color: var(--paper);
+}
+.footer .footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.14);
+  padding-top: 24px;
+}
+.footer-location::after {
+  border-top-color: currentColor;
+}
+
+@media (max-width: 1080px) {
+  .site-header .brand,
+  body:has(.iconic-home) .site-header .brand {
+    filter: none;
+  }
+  body:has(.iconic-home) .nav-links a,
+  body:has(.iconic-home) .nav-actions a {
+    color: #34302b;
+    text-shadow: none;
+  }
+  .nav {
+    width: min(100% - 28px, 1280px);
+    padding: 10px 0;
+  }
+  .mobile-menu-button {
+    border-color: rgba(6,75,59,0.18);
+    background: rgba(255,254,250,0.74);
+  }
+  .iconic-home {
+    margin-top: 0;
+  }
+  .luxury-hero {
+    padding-top: clamp(90px, 16vw, 140px);
+  }
+  .bullion-command-grid,
+  .legacy-grid {
+    grid-template-columns: 1fr;
+  }
+  .luxe-product-grid,
+  .trust-obligation-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .nav-links a,
+  .nav-actions a {
+    color: #34302b;
+    text-shadow: none;
+  }
+  .luxury-hero {
+    min-height: min(700px, calc(100svh - 38px));
+    padding: 92px 0 54px;
+    background:
+      linear-gradient(180deg, rgba(2,33,27,0.82), rgba(2,33,27,0.42)),
+      url("https://images.unsplash.com/photo-1512316609839-ce289d3eba0a?auto=format&fit=crop&w=1000&q=88") center/cover;
+  }
+  .luxury-hero .display {
+    font-size: clamp(3.3rem, 15vw, 5rem);
+  }
+  .dual-showcase,
+  .luxe-product-grid,
+  .legacy-stats,
+  .trust-obligation-grid {
+    grid-template-columns: 1fr;
+  }
+  .curated-head {
+    align-items: start;
+    flex-direction: column;
+  }
+  .category-tabs {
+    gap: 16px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+  }
+  .category-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  .showcase-panel,
+  .trust-obligation-card {
+    min-height: 360px;
+  }
+  .bullion-price-ticket dl div {
+    display: grid;
+    gap: 4px;
+  }
+  .legacy-image {
+    min-height: 430px;
+  }
+  .footer-home-link {
+    text-align: left;
   }
 }

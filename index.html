@@ -60,7 +60,7 @@
       </li>
       <li><a href="dashboard/">Dashboard</a></li>
     </ul>
-    <a class="brand" href="" aria-label="Iconic Jewellery home">
+    <a class="brand" href="./" aria-label="Iconic Jewellery home">
       <img class="brand-logo" src="assets/iconic/iconic-jewellery-logo-transparent.png" alt="Iconic Jewellery">
     </a>
     <div class="nav-actions">
@@ -73,11 +73,11 @@
 </header>
 <div class="mobile-menu-panel" id="mobile-menu" aria-hidden="true">
   <div class="mobile-menu-head">
-    <a class="brand" href="" aria-label="Iconic Jewellery home"><img class="brand-logo" src="assets/iconic/iconic-jewellery-logo-transparent.png" alt="Iconic Jewellery"></a>
+    <a class="brand" href="./" aria-label="Iconic Jewellery home"><img class="brand-logo" src="assets/iconic/iconic-jewellery-logo-transparent.png" alt="Iconic Jewellery"></a>
     <button class="mobile-menu-close" type="button">Close</button>
   </div>
   <nav aria-label="Mobile navigation">
-    <a href="">Home</a>
+    <a href="./">Home</a>
     <a href="about/">About Iconic</a>
     <a href="jewellery/">Jewellery Collection</a>
     <a href="jewellery-product/">Jewellery Product</a>
@@ -93,126 +93,156 @@
     <a class="mobile-primary" href="checkout/">Secure Checkout</a>
   </nav>
 </div>
-<main id="top" class="home-page">
-<section class="home-hero" aria-labelledby="hero-title">
-  <div class="home-hero-media" aria-hidden="true"></div>
-  <div class="home-hero-panel">
-    <span class="kicker reveal">The Iconic Edit</span>
-    <h1 class="display reveal" id="hero-title">Fine jewellery and bullion, composed with quiet confidence.</h1>
-    <p class="reveal">A refined destination for considered pieces, live-priced gold, and secure ownership from first look to final verification.</p>
+<main id="top" class="home-page iconic-home">
+<section class="luxury-hero" aria-labelledby="hero-title">
+  <div class="luxury-hero-content">
+    <span class="kicker reveal">Iconic Jewellery &amp; Bullion</span>
+    <h1 class="display reveal" id="hero-title">Timeless jewellery. <em>Secure bullion.</em> Crafted for confidence.</h1>
+    <p class="reveal">Luxury pieces and investment-grade gold in one verified destination, with live pricing, private appointments, and ownership records that stay clear.</p>
     <div class="hero-actions reveal">
-      <a class="btn btn-primary" href="jewellery/">Shop Jewellery</a>
-      <a class="btn btn-secondary" href="bullion/">Explore Bullion</a>
+      <a class="btn btn-primary" href="contact/">Book Appointment</a>
+      <a class="btn btn-outline" href="bullion/">View Bullion</a>
     </div>
   </div>
 </section>
 
-<section class="home-product-strip" aria-labelledby="signature-title">
-  <div class="home-section-heading">
-    <span class="kicker reveal">Signature selection</span>
-    <h2 id="signature-title" class="section-title reveal">A few enduring objects.</h2>
+<section class="dual-showcase" aria-label="Jewellery and bullion pathways">
+  <a class="showcase-panel showcase-jewellery reveal" href="jewellery/">
+    <span class="kicker">Jewellery</span>
+    <h2>Worn with intention.</h2>
+    <small>Explore fine pieces</small>
+  </a>
+  <a class="showcase-panel showcase-bullion reveal" href="bullion/">
+    <span class="kicker">Bullion</span>
+    <h2>Invested with confidence.</h2>
+    <small>Enter the bullion desk</small>
+  </a>
+</section>
+
+<section class="curated-section" aria-labelledby="curated-title">
+  <div class="container curated-head">
+    <div>
+      <span class="kicker reveal">Signature selection</span>
+      <h2 id="curated-title" class="section-title reveal">Curated with <em>artisan precision.</em></h2>
+    </div>
+    <a class="text-link reveal" href="jewellery/">View all</a>
   </div>
-  <div class="home-product-row">
-    <a class="home-product-card reveal" href="jewellery-product/">
-      <span class="home-product-image product-ring"></span>
-      <strong>Emerald Grace Ring</strong>
-      <small>18k yellow gold</small>
-      <em>AUD 3,850</em>
+  <div class="container category-tabs reveal" aria-label="Product categories">
+    <button class="active" type="button" data-home-category="rings">Rings</button>
+    <button type="button" data-home-category="necklaces">Necklaces</button>
+    <button type="button" data-home-category="bracelets">Bracelets</button>
+    <button type="button" data-home-category="earrings">Earrings</button>
+    <button type="button" data-home-category="bullion">Bullion</button>
+  </div>
+  <div class="container luxe-product-grid" data-home-product-grid aria-live="polite">
+    <a class="luxe-product-card reveal" href="jewellery-product/">
+      <span class="product-tag">New</span>
+      <span class="luxe-product-image product-ring"></span>
+      <strong>Solitaire Revival</strong>
+      <small>18k rose gold, natural diamond</small>
+      <em>AUD 4,650</em>
     </a>
-    <a class="home-product-card reveal" href="jewellery-product/">
-      <span class="home-product-image product-necklace"></span>
-      <strong>Celeste Diamond Necklace</strong>
+    <a class="luxe-product-card reveal" href="jewellery-product/">
+      <span class="luxe-product-image product-necklace"></span>
+      <strong>Celeste Halo Ring</strong>
       <small>White gold, certified diamonds</small>
       <em>AUD 7,200</em>
     </a>
-    <a class="home-product-card reveal" href="bullion-product/">
-      <span class="home-product-image product-bullion"></span>
-      <strong>10g Gold Bullion Bar</strong>
-      <small>99.99% purity</small>
-      <em>AUD 2,005</em>
-    </a>
-    <a class="home-product-card reveal" href="jewellery-product/">
-      <span class="home-product-image product-bracelet"></span>
-      <strong>Royal Halo Bracelet</strong>
-      <small>Polished gold detailing</small>
-      <em>AUD 4,950</em>
+    <a class="luxe-product-card reveal" href="jewellery-product/">
+      <span class="product-tag">Edit</span>
+      <span class="luxe-product-image product-bracelet"></span>
+      <strong>Golden Trio</strong>
+      <small>Yellow gold, diamond detail</small>
+      <em>AUD 3,950</em>
     </a>
   </div>
 </section>
 
-<section class="home-story-band bullion-story" aria-labelledby="bullion-story-title">
-  <div class="home-story-copy reveal">
-    <span class="kicker">Bullion desk</span>
-    <h2 id="bullion-story-title">Live gold pricing, made calm.</h2>
-    <p>Verified customers can move from market view to price lock with a clear record of purity, weight, and serial identity.</p>
-    <a class="btn btn-gold" href="bullion/">View Bullion</a>
+<section class="bullion-command" aria-labelledby="bullion-command-title">
+  <div class="container bullion-command-grid">
+    <div class="bullion-command-copy reveal">
+      <span class="kicker">Live market confidence</span>
+      <h2 id="bullion-command-title" class="section-title">Real-time prices. <em>Verified in script.</em></h2>
+      <p>Buy, track, and verify precious metal holdings through a calm portal designed around account approval, price clarity, and documented ownership.</p>
+      <ul>
+        <li>Live AUD metal values</li>
+        <li>Verified bullion accounts</li>
+        <li>Barcode and serial lookup</li>
+      </ul>
+    </div>
+    <aside class="bullion-price-ticket reveal" aria-label="Featured bullion price">
+      <span class="price-medallion">Au</span>
+      <small>Gold bullion</small>
+      <strong>AUD 4,823.50</strong>
+      <dl>
+        <div><dt>Weight</dt><dd>25g</dd></div>
+        <div><dt>Purity</dt><dd>99.99%</dd></div>
+        <div><dt>Account status</dt><dd>Verified</dd></div>
+      </dl>
+      <a class="btn btn-primary" href="bullion-product/">Add to Vault</a>
+    </aside>
   </div>
 </section>
 
-<section class="home-editorial-grid" aria-label="Jewellery and bullion highlights">
-  <a class="editorial-tile editorial-jewellery reveal" href="jewellery/">
-    <span class="kicker">Jewellery</span>
-    <h2>Pieces for daily ceremony.</h2>
-    <p>Rings, necklaces, bracelets, earrings, and sets chosen for a timeless wardrobe.</p>
-  </a>
-  <a class="editorial-tile editorial-bullion reveal" href="bullion-product/">
-    <span class="kicker">Bullion</span>
-    <h2>Investment-grade gold.</h2>
-    <p>Live price visibility, admin-controlled margins, and verification before checkout.</p>
-  </a>
-  <a class="editorial-tile editorial-verify reveal" href="serial-verification/">
-    <span class="kicker">Verification</span>
-    <h2>Every serial tells the story.</h2>
-    <p>Look up item details and confirm authenticity through the customer portal.</p>
-  </a>
-</section>
-
-<section class="home-feature-split" aria-labelledby="atelier-title">
-  <div class="feature-image feature-atelier reveal" aria-hidden="true"></div>
-  <div class="feature-copy reveal">
-    <span class="kicker">Iconic standard</span>
-    <h2 id="atelier-title" class="section-title">A store built for beauty and proof.</h2>
-    <p class="section-copy">The experience blends editorial jewellery browsing with bullion-grade controls: account approval, document upload, secure checkout, and barcode verification.</p>
-    <a class="btn btn-primary" href="dashboard/">Enter Portal</a>
+<section class="legacy-section" aria-labelledby="legacy-title">
+  <div class="container legacy-grid">
+    <div class="legacy-image reveal" aria-hidden="true"><span>18+ private viewings</span></div>
+    <div class="legacy-copy reveal">
+      <span class="kicker">Our Story</span>
+      <h2 id="legacy-title" class="section-title">A legacy built on craft, care, and <em>conviction.</em></h2>
+      <p>Iconic Jewellery pairs the emotion of fine jewellery with the discipline of bullion ownership. Every piece, price, and record is designed to make the client feel informed, protected, and quietly certain.</p>
+      <div class="legacy-stats" aria-label="Iconic Jewellery statistics">
+        <div><strong>12,000+</strong><span>Verified clients</span></div>
+        <div><strong>A$200M+</strong><span>Asset value handled</span></div>
+        <div><strong>100%</strong><span>Audited workflows</span></div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="home-services" aria-labelledby="services-title">
-  <div class="home-section-heading">
-    <span class="kicker reveal">Services</span>
-    <h2 id="services-title" class="section-title reveal">Designed around trust.</h2>
-  </div>
-  <div class="service-grid">
-    <a class="service-card service-appointment reveal" href="contact/">
-      <span></span>
-      <strong>Book an Appointment</strong>
-      <small>Speak with the Iconic team.</small>
-    </a>
-    <a class="service-card service-verification reveal" href="verification/">
-      <span></span>
-      <strong>Customer Verification</strong>
-      <small>Prepare your account for bullion purchases.</small>
-    </a>
-    <a class="service-card service-care reveal" href="serial-verification/">
-      <span></span>
-      <strong>Serial Lookup</strong>
-      <small>Confirm item details after purchase.</small>
-    </a>
+<section class="trust-obligation" aria-labelledby="trust-title">
+  <div class="container">
+    <div class="trust-heading reveal">
+      <span class="kicker">Why Iconic</span>
+      <h2 id="trust-title" class="section-title">Your confidence is our <em>highest obligation.</em></h2>
+    </div>
+    <div class="trust-obligation-grid">
+      <a class="trust-obligation-card reveal" href="verification/">
+        <span>01</span>
+        <strong>KYC verified</strong>
+        <p>Account approval before bullion purchase keeps each transaction accountable.</p>
+      </a>
+      <a class="trust-obligation-card reveal" href="bullion/">
+        <span>02</span>
+        <strong>Live bullion desk</strong>
+        <p>Dummy real-time price movement gives the portal a market-aware rhythm.</p>
+      </a>
+      <a class="trust-obligation-card reveal" href="serial-verification/">
+        <span>03</span>
+        <strong>Serial verification</strong>
+        <p>Each eligible item can be checked against clear product records.</p>
+      </a>
+      <a class="trust-obligation-card reveal" href="cart/">
+        <span>04</span>
+        <strong>Secure checkout</strong>
+        <p>Orders move through a composed cart and checkout journey.</p>
+      </a>
+    </div>
   </div>
 </section>
 
 <section class="newsletter-section" aria-labelledby="newsletter-title">
   <div class="container newsletter-inner">
     <div>
-      <span class="kicker reveal">Newsletter</span>
-      <h2 class="section-title reveal" id="newsletter-title">Stay close to the collection.</h2>
-      <p class="section-copy reveal">Receive new arrivals, bullion availability, and private announcements from Iconic Jewellery.</p>
+      <span class="kicker reveal">Private Circle</span>
+      <h2 class="section-title reveal" id="newsletter-title">Enter the inner <em>circle.</em></h2>
+      <p class="section-copy reveal">Receive new arrivals, bullion availability, private appointments, and market-aware notes from Iconic Jewellery.</p>
     </div>
     <form class="newsletter-form reveal">
       <label for="newsletter-email">Email address</label>
       <div class="newsletter-controls">
-        <input id="newsletter-email" type="email" placeholder="Enter your email address">
-        <button class="btn btn-gold" type="submit">Subscribe</button>
+        <input id="newsletter-email" type="email" placeholder="Email address">
+        <button class="btn btn-primary" type="submit">Join the List</button>
       </div>
     </form>
   </div>
@@ -220,7 +250,7 @@
 </main>
 <footer class="footer">
   <div class="container">
-    <a class="footer-home-link" href="">Home</a>
+    <a class="footer-home-link" href="./">Home</a>
     <div class="footer-grid home-footer-grid">
       <div>
         <h3>Client Care</h3>
@@ -270,6 +300,6 @@
     </div>
   </div>
 </footer>
-<script src="site.js?v=20260604-prices"></script>
+<script src="site.js?v=20260604-responsive"></script>
 </body>
 </html>
