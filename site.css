@@ -140,7 +140,7 @@ img { display: block; max-width: 100%; }
   position: relative;
   min-height: 92px;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   gap: clamp(10px, 1.3vw, 20px);
   margin-top: 18px;
@@ -166,7 +166,7 @@ img { display: block; max-width: 100%; }
   gap: clamp(20px, 2.1vw, 34px);
 }
 .nav-actions {
-  gap: clamp(18px, 1.8vw, 30px);
+  gap: clamp(22px, 2.2vw, 38px);
 }
 .nav-links-left {
   justify-content: flex-start;
@@ -201,8 +201,8 @@ img { display: block; max-width: 100%; }
 .nav-actions .btn-primary {
   min-height: 58px;
   border-radius: 999px;
-  min-width: clamp(220px, 18vw, 286px);
-  padding-inline: clamp(24px, 2.7vw, 44px);
+  min-width: clamp(230px, 19vw, 300px);
+  padding-inline: clamp(28px, 3vw, 48px);
   font-size: 0.78rem;
 }
 .brand {
