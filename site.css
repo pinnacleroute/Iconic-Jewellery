@@ -4211,6 +4211,16 @@ body:has(.iconic-home) .site-header .brand {
 }
 .mega-menu {
   text-shadow: none;
+  background: linear-gradient(135deg, #07382f, #101a17);
+  border-color: rgba(210,173,101,0.58);
+  box-shadow: 0 28px 80px rgba(0,0,0,0.38);
+}
+.nav-links .mega-menu .mega-column a {
+  color: rgba(255,255,255,0.84);
+}
+.nav-links .mega-menu .mega-column a:hover,
+.nav-links .mega-menu .mega-column a:focus-visible {
+  color: #fff;
 }
 
 .iconic-home {
