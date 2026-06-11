@@ -4193,7 +4193,7 @@ textarea {
   color: #34302b;
   text-shadow: none;
 }
-body:has(.iconic-home) .nav-links a,
+body:has(.iconic-home) .nav-links > li > a,
 body:has(.iconic-home) .nav-actions a {
   color: #f7f0e6;
   text-shadow: 0 1px 18px rgba(0,0,0,0.2);
@@ -4217,6 +4217,7 @@ body:has(.iconic-home) .site-header .brand {
 }
 .nav-links .mega-menu .mega-column a {
   color: rgba(255,255,255,0.84);
+  text-shadow: none;
 }
 .nav-links .mega-menu .mega-column a:hover,
 .nav-links .mega-menu .mega-column a:focus-visible {
@@ -4725,7 +4726,7 @@ body:has(.iconic-home) .site-header .brand {
   body:has(.iconic-home) .site-header .brand {
     filter: none;
   }
-  body:has(.iconic-home) .nav-links a,
+  body:has(.iconic-home) .nav-links > li > a,
   body:has(.iconic-home) .nav-actions a {
     color: #34302b;
     text-shadow: none;
