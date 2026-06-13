@@ -5117,6 +5117,7 @@ body:has(.iconic-home) .nav-actions .btn-primary {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .editorial-tile {
+  height: clamp(440px, 47vw, 720px);
   min-height: clamp(440px, 47vw, 720px);
 }
 .editorial-tile-large {
@@ -5162,36 +5163,48 @@ body:has(.iconic-home) .nav-actions .btn-primary {
 }
 .editorial-product-story,
 .editorial-object {
-  display: grid;
-  grid-template-rows: minmax(0, 1fr) auto;
-  background: #f7f3ec;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: var(--paper);
+  background: #08110f;
+}
+.editorial-image-frame {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
 }
 .editorial-product-image,
 .editorial-object-image {
   display: block;
-  min-height: 360px;
-  background-position: center;
-  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
-.editorial-product-image {
-  background-size: auto 70%;
-  background-image: url("https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1400&q=88");
-}
-.editorial-object-image {
-  background-size: auto 58%;
-  background-image: url("https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&w=1400&q=88");
+.editorial-product-story::after,
+.editorial-object::after {
+  content: "";
+  position: absolute;
+  inset: 32% 0 0;
+  z-index: -1;
+  background: linear-gradient(180deg, transparent, rgba(2, 20, 16, 0.8));
 }
 .editorial-product-copy {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
   display: grid;
   gap: 9px;
-  padding: 24px clamp(22px, 4vw, 48px) 30px;
-  text-align: center;
+  padding: clamp(28px, 5vw, 64px);
+  text-align: left;
 }
 .editorial-product-copy small {
-  color: #756d63;
+  color: rgba(255, 255, 255, 0.78);
 }
 .editorial-product-copy strong {
-  color: var(--green);
+  color: var(--paper);
 }
 
 .craftsmanship-feature {
@@ -5329,17 +5342,13 @@ body:has(.iconic-home) .nav-actions .btn-primary {
     grid-template-columns: 1fr;
   }
   .editorial-tile {
+    height: auto;
     min-height: 470px;
   }
   .editorial-product-story,
   .editorial-object {
-    min-height: 560px;
-  }
-  .editorial-product-image {
-    background-size: auto 72%;
-  }
-  .editorial-object-image {
-    background-size: 88% auto;
+    height: auto;
+    min-height: 470px;
   }
   .craftsmanship-media {
     min-height: 500px;
