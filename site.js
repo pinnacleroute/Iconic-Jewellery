@@ -17,6 +17,209 @@ document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') setMenu(false);
 });
 
+const submenuItems = Array.from(document.querySelectorAll('.has-submenu'));
+submenuItems.forEach((item) => {
+  const trigger = item.querySelector(':scope > a');
+  let closeTimer;
+
+  function openSubmenu() {
+    window.clearTimeout(closeTimer);
+    item.classList.remove('submenu-dismissed');
+    submenuItems.forEach((otherItem) => {
+      if (otherItem === item) return;
+      otherItem.classList.remove('submenu-open');
+      otherItem.classList.remove('submenu-dismissed');
+      otherItem.querySelector(':scope > a')?.setAttribute('aria-expanded', 'false');
+    });
+    item.classList.add('submenu-open');
+    trigger?.setAttribute('aria-expanded', 'true');
+  }
+
+  function scheduleSubmenuClose() {
+    window.clearTimeout(closeTimer);
+    closeTimer = window.setTimeout(() => {
+      item.classList.remove('submenu-open');
+      trigger?.setAttribute('aria-expanded', 'false');
+    }, 350);
+  }
+
+  item.addEventListener('pointerenter', openSubmenu);
+  item.addEventListener('pointerleave', scheduleSubmenuClose);
+  item.addEventListener('focusin', openSubmenu);
+  item.addEventListener('focusout', (event) => {
+    if (!item.contains(event.relatedTarget)) scheduleSubmenuClose();
+  });
+  trigger?.addEventListener('click', (event) => {
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+    if (!item.classList.contains('submenu-open')) {
+      event.preventDefault();
+      openSubmenu();
+    }
+  });
+});
+
+document.addEventListener('pointerdown', (event) => {
+  submenuItems.forEach((item) => {
+    if (item.contains(event.target)) return;
+    item.classList.remove('submenu-open');
+    item.classList.remove('submenu-dismissed');
+    item.querySelector(':scope > a')?.setAttribute('aria-expanded', 'false');
+  });
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key !== 'Escape') return;
+  submenuItems.forEach((item) => {
+    item.classList.remove('submenu-open');
+    if (item.contains(document.activeElement)) item.classList.add('submenu-dismissed');
+    item.querySelector(':scope > a')?.setAttribute('aria-expanded', 'false');
+  });
+});
+
+let toastTimer;
+function showToast(message, tone = 'success') {
+  let toast = document.querySelector('.site-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.className = 'site-toast';
+    toast.setAttribute('role', 'status');
+    toast.setAttribute('aria-live', 'polite');
+    document.body.appendChild(toast);
+  }
+  window.clearTimeout(toastTimer);
+  toast.textContent = message;
+  toast.dataset.tone = tone;
+  toast.classList.add('visible');
+  toastTimer = window.setTimeout(() => toast.classList.remove('visible'), 3200);
+}
+
+document.addEventListener('click', (event) => {
+  const galleryThumb = event.target.closest('.gallery-thumb');
+  if (galleryThumb) {
+    const gallery = galleryThumb.closest('.product-gallery');
+    const mainImage = gallery?.querySelector('.gallery-main');
+    if (!mainImage) return;
+    const imageClass = Array.from(galleryThumb.classList).find((className) => className.startsWith('gallery-emerald-'));
+    gallery.querySelectorAll('.gallery-thumb').forEach((thumb) => thumb.classList.toggle('active', thumb === galleryThumb));
+    Array.from(mainImage.classList).filter((className) => className.startsWith('gallery-emerald-')).forEach((className) => mainImage.classList.remove(className));
+    if (imageClass) mainImage.classList.add(imageClass);
+    return;
+  }
+
+  const sizeButton = event.target.closest('.size-selector button');
+  if (sizeButton) {
+    sizeButton.closest('.size-selector').querySelectorAll('button').forEach((button) => {
+      button.classList.toggle('active', button === sizeButton);
+      button.setAttribute('aria-pressed', String(button === sizeButton));
+    });
+    showToast(`Size ${sizeButton.textContent.trim()} selected.`);
+    return;
+  }
+
+  const wishlistButton = event.target.closest('.wishlist-button');
+  if (wishlistButton) {
+    const selected = wishlistButton.getAttribute('aria-pressed') !== 'true';
+    wishlistButton.setAttribute('aria-pressed', String(selected));
+    wishlistButton.classList.toggle('selected', selected);
+    wishlistButton.textContent = selected ? '♥' : '♡';
+    showToast(selected ? 'Added to your wishlist.' : 'Removed from your wishlist.');
+    return;
+  }
+
+  const uploadButton = event.target.closest('.document-field .btn');
+  if (uploadButton) {
+    uploadButton.closest('.document-field')?.querySelector('input[type="file"]')?.click();
+    return;
+  }
+
+  const actionButton = event.target.closest('button');
+  if (!actionButton) return;
+  const action = actionButton.textContent.trim();
+  const feedback = {
+    'Create Account': 'Account details captured for this prototype.',
+    Login: 'Login submitted for this prototype.',
+    'Save Settings': 'Account settings saved.',
+    'Send Enquiry': 'Your enquiry has been captured.',
+    'Submit for Review': 'Documents submitted for review.',
+    'Place Order / Pay Securely': 'Complete account verification before placing this bullion order.',
+  };
+  if (feedback[action]) {
+    const tone = action === 'Place Order / Pay Securely' ? 'warning' : 'success';
+    showToast(feedback[action], tone);
+  }
+});
+
+document.querySelectorAll('.document-field input[type="file"]').forEach((input) => {
+  input.addEventListener('change', () => {
+    const button = input.closest('.document-field')?.querySelector('.btn');
+    if (!button) return;
+    button.textContent = input.files?.length ? 'Document Selected' : 'Upload Document';
+    showToast(input.files?.length ? `${input.files[0].name} selected.` : 'No document selected.');
+  });
+});
+
+document.querySelectorAll('.footer form, .newsletter-form').forEach((form) => {
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const email = form.querySelector('input[type="email"]');
+    if (!email?.value.trim()) {
+      email?.focus();
+      showToast('Enter an email address to subscribe.', 'warning');
+      return;
+    }
+    showToast('Thank you for joining the Iconic list.');
+    form.reset();
+  });
+});
+
+function updateCartSummary() {
+  const rows = Array.from(document.querySelectorAll('.cart-row'));
+  const subtotal = rows.reduce((sum, row) => {
+    const unitPrice = Number(row.querySelector('strong')?.textContent.replace(/[^\d.]/g, '')) || 0;
+    const quantity = Math.max(1, Number(row.querySelector('.cart-quantity')?.value) || 1);
+    return sum + (unitPrice * quantity);
+  }, 0);
+  const delivery = rows.length ? 68 : 0;
+  const values = document.querySelectorAll('.cart-summary-panel dd');
+  if (values[0]) values[0].textContent = `AUD ${subtotal.toLocaleString('en-AU', { minimumFractionDigits: 2 })}`;
+  if (values[1]) values[1].textContent = `AUD ${delivery.toFixed(2)}`;
+  if (values[3]) values[3].textContent = `AUD ${(subtotal + delivery).toLocaleString('en-AU', { minimumFractionDigits: 2 })}`;
+  const checkoutLink = document.querySelector('.cart-summary-panel .btn');
+  if (checkoutLink) {
+    checkoutLink.classList.toggle('disabled', rows.length === 0);
+    checkoutLink.setAttribute('aria-disabled', String(rows.length === 0));
+  }
+}
+
+document.querySelector('.cart-table')?.addEventListener('click', (event) => {
+  const removeButton = event.target.closest('.remove-button');
+  if (!removeButton) return;
+  removeButton.closest('.cart-row')?.remove();
+  updateCartSummary();
+  showToast('Item removed from your cart.');
+});
+document.querySelector('.cart-table')?.addEventListener('change', (event) => {
+  if (!event.target.matches('.cart-quantity')) return;
+  event.target.value = Math.max(1, Number(event.target.value) || 1);
+  updateCartSummary();
+});
+
+const serialForm = document.querySelector('.serial-lookup-form');
+serialForm?.querySelector('button')?.addEventListener('click', () => {
+  const serialInput = serialForm.querySelector('input');
+  const serial = serialInput?.value.trim().toUpperCase();
+  if (!serial) {
+    serialInput?.focus();
+    showToast('Enter a serial number to continue.', 'warning');
+    return;
+  }
+  const valid = serial === 'IJG-10G-28491';
+  document.querySelector('.serial-result-card.valid')?.classList.toggle('result-highlight', valid);
+  document.querySelector('.serial-result-card.invalid')?.classList.toggle('result-highlight', !valid);
+  document.querySelector('.serial-results-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  showToast(valid ? 'Item verified successfully.' : 'Serial number not found.', valid ? 'success' : 'warning');
+});
+
 const priceSets = [
   {
     gold: 'AUD 6,235.69/oz',
@@ -346,6 +549,17 @@ if (document.querySelector('[data-collection-grid]')) {
     renderCollectionProducts();
   }
 }
+
+document.querySelector('.sort-control select')?.addEventListener('change', (event) => {
+  const grid = document.querySelector('[data-collection-grid]');
+  if (!grid) return;
+  const cards = Array.from(grid.children);
+  const priceFor = (card) => Number(card.querySelector('.catalogue-footer strong, .bullion-product-info > strong')?.textContent.replace(/[^\d.]/g, '')) || 0;
+  if (event.target.value === 'Price: Low to High') cards.sort((a, b) => priceFor(a) - priceFor(b));
+  if (event.target.value === 'Price: High to Low') cards.sort((a, b) => priceFor(b) - priceFor(a));
+  cards.forEach((card) => grid.appendChild(card));
+  showToast(`Sorted by ${event.target.value.toLowerCase()}.`);
+});
 
 const canShowNewsletterPopup = !document.querySelector('.home-page') && window.matchMedia('(min-width: 1081px)').matches;
 if (canShowNewsletterPopup) {
