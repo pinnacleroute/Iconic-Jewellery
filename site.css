@@ -5164,19 +5164,21 @@ body:has(.iconic-home) .nav-actions .btn-primary {
 .editorial-object {
   display: grid;
   grid-template-rows: minmax(0, 1fr) auto;
-  background: #fffdfa;
+  background: #f7f3ec;
 }
 .editorial-product-image,
 .editorial-object-image {
   display: block;
   min-height: 360px;
   background-position: center;
-  background-size: cover;
+  background-repeat: no-repeat;
 }
 .editorial-product-image {
+  background-size: auto 70%;
   background-image: url("https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1400&q=88");
 }
 .editorial-object-image {
+  background-size: auto 58%;
   background-image: url("https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&w=1400&q=88");
 }
 .editorial-product-copy {
@@ -5332,6 +5334,12 @@ body:has(.iconic-home) .nav-actions .btn-primary {
   .editorial-product-story,
   .editorial-object {
     min-height: 560px;
+  }
+  .editorial-product-image {
+    background-size: auto 72%;
+  }
+  .editorial-object-image {
+    background-size: 88% auto;
   }
   .craftsmanship-media {
     min-height: 500px;
