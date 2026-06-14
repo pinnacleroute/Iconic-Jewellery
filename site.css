@@ -4880,31 +4880,31 @@ body:has(.iconic-home) .site-header .brand {
   }
 }
 
-/* 2026 editorial homepage refresh */
-body:has(.iconic-home) .site-header {
+/* 2026 editorial navigation refresh */
+.site-header {
   position: relative;
   z-index: 60;
 }
-body:has(.iconic-home) .nav {
+.nav {
   min-height: 62px;
   width: min(100% - 44px, 1480px);
   padding-block: 6px;
 }
-body:has(.iconic-home) .brand {
+.site-header .brand {
   width: clamp(108px, 9vw, 148px);
   height: 54px;
 }
-body:has(.iconic-home) .nav-links,
-body:has(.iconic-home) .nav-actions {
+.nav-links,
+.nav-actions {
   gap: clamp(14px, 1.65vw, 28px);
 }
-body:has(.iconic-home) .nav-links a,
-body:has(.iconic-home) .nav-actions a {
+.nav-links a,
+.nav-actions a {
   min-height: 36px;
   font-size: 0.66rem;
   letter-spacing: 0.14em;
 }
-body:has(.iconic-home) .nav-actions .btn-primary {
+.nav-actions .btn-primary {
   min-height: 38px;
   border-radius: 0;
   background: rgba(4, 54, 43, 0.52);
